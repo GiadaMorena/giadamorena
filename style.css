@@ -8,6 +8,11 @@
     --color-border: rgba(245, 245, 245, 0.1);
     --font-primary: 'Inter', sans-serif;
     --header-height: 80px;
+    /* Aggiunte per safe areas */
+    --safe-area-top: env(safe-area-inset-top, 0px);
+    --safe-area-right: env(safe-area-inset-right, 0px);
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-area-left: env(safe-area-inset-left, 0px);
 }
 
 *, *::before, *::after {
@@ -107,7 +112,7 @@ section.visible {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1002; /* Aumentato per stare sopra il menu mobile */
     padding: 0;
     height: var(--header-height);
     background-color: rgba(10, 10, 10, 0.8);
@@ -127,27 +132,6 @@ section.visible {
     font-weight: 900;
     color: var(--color-text);
     letter-spacing: -1px;
-}
-
-.header-nav {
-    display: flex;
-    gap: 15px;
-}
-
-.header-nav a {
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: var(--color-text);
-    padding: 10px 18px;
-    border: 1px solid var(--color-border);
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.header-nav a:hover {
-    background-image: var(--color-accent-gradient);
-    color: var(--color-bg);
-    border-color: transparent;
 }
 
 /* Hero Section & Page Intros */
@@ -415,55 +399,46 @@ footer .container {
 #projects-list-section {
     padding-top: 100px;
 }
-
 .project-list {
     display: flex;
     flex-direction: column;
     gap: 80px;
 }
-
 .project-card {
     border: 1px solid var(--color-border);
     padding: 40px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.02);
 }
-
 .project-card h3 {
     margin-bottom: 15px;
     font-size: 2rem;
 }
-
 .project-card p {
     max-width: 75ch;
     margin-bottom: 40px;
 }
-
 .mini-feed-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 15px;
     margin-bottom: 40px;
 }
-
 .mini-feed-item {
     aspect-ratio: 4 / 5; 
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
 }
-
 .mini-feed-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
-
 .mini-feed-item:hover img {
     transform: scale(1.1);
 }
-
 .project-cta-button {
     display: inline-block;
     padding: 14px 35px;
@@ -474,12 +449,10 @@ footer .container {
     text-align: center;
     transition: all 0.3s ease;
 }
-
 .project-cta-button:hover {
     background-color: var(--color-accent-static);
     color: var(--color-bg);
 }
-
 
 @media (max-width: 768px) {
     .skills-grid-container {
@@ -498,17 +471,17 @@ footer .container {
    Stili per Navigazione Mobile
    ========================================================================== */
 
-/* Di base, il menu mobile e il suo bottone sono nascosti */
+.header-nav { display: flex; gap: 15px; }
+.header-nav a { font-weight: 700; font-size: 0.9rem; color: var(--color-text); padding: 10px 18px; border: 1px solid var(--color-border); border-radius: 5px; transition: all 0.3s ease; }
+.header-nav a:hover { background-image: var(--color-accent-gradient); color: var(--color-bg); border-color: transparent; }
 .mobile-nav-toggle { display: none; }
 .mobile-nav { display: none; }
 
 
 @media (max-width: 768px) {
-    /* SU MOBILE: Nascondi nav desktop, mostra bottone hamburger */
     .header-nav {
         display: none;
     }
-
     .mobile-nav-toggle {
         display: flex;
         flex-direction: column;
@@ -519,16 +492,14 @@ footer .container {
         border: none;
         cursor: pointer;
         padding: 0;
-        z-index: 1003; /* Sopra tutto */
+        z-index: 1003;
     }
-
     .mobile-nav-toggle .sr-only {
         position: absolute;
         width: 1px; height: 1px; padding: 0; margin: -1px;
         overflow: hidden; clip: rect(0, 0, 0, 0);
         white-space: nowrap; border-width: 0;
     }
-
     .mobile-nav-toggle .bar {
         display: block;
         width: 100%;
@@ -537,14 +508,9 @@ footer .container {
         border-radius: 2px;
         transition: all 0.3s ease-in-out;
     }
-
-    /* Animazione del bottone a croce */
     .mobile-nav-toggle.is-active .bar:nth-child(1) { transform: translateY(9.5px) rotate(45deg); }
     .mobile-nav-toggle.is-active .bar:nth-child(2) { opacity: 0; }
     .mobile-nav-toggle.is-active .bar:nth-child(3) { transform: translateY(-9.5px) rotate(-45deg); }
-
-
-    /* Stili del pannello menu che appare */
     .mobile-nav {
         display: flex;
         flex-direction: column;
@@ -557,20 +523,17 @@ footer .container {
         width: 100%;
         height: 100%;
         background-color: var(--color-bg);
-        z-index: 1001; /* Sotto l'header ma sopra il contenuto */
+        z-index: 1001;
         transform: translateX(100%);
         transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        padding: var(--safe-area-top) var(--safe-area-right) var(--safe-area-bottom) var(--safe-area-left);
     }
-
-    /* Quando il menu è aperto */
     body.nav-open .mobile-nav {
         transform: translateX(0);
     }
-    
     body.nav-open {
         overflow: hidden;
     }
-
     .mobile-nav a {
         font-size: 1.5rem;
         padding: 15px 30px;
@@ -578,5 +541,24 @@ footer .container {
     }
     .mobile-nav a:hover {
         color: var(--color-accent-static);
+    }
+    
+    /* ===== NUOVI STILI PER IL PULSANTE DI CHIUSURA "X" ===== */
+    .mobile-nav-close {
+        position: absolute;
+        top: calc(15px + var(--safe-area-top));
+        right: calc(20px + var(--safe-area-right));
+        background: transparent;
+        border: none;
+        color: var(--color-text);
+        font-size: 2.8rem;
+        line-height: 1;
+        padding: 10px;
+        cursor: pointer;
+        transition: transform 0.3s, color 0.3s;
+    }
+    .mobile-nav-close:hover {
+        color: var(--color-accent-static);
+        transform: scale(1.1) rotate(90deg);
     }
 }

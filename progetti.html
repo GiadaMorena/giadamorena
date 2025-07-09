@@ -14,22 +14,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ** MODIFICA ** Aggiunto l'HTML per il Lightbox -->
+    <div class="spotlight"></div>
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">×</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
-    <header id="main-header">
-        <div class="container nav-wrapper">
-            <div class="logo"><a href="index.html">GIADA MORENA</a></div>
-            <div class="header-nav">
-                <a href="index.html">HOME</a>
-                <a href="progetti.html">PROGETTI</a>
-                <a href="fotografia.html">FOTOGRAFIA</a>
-            </div>
-        </div>
-    </header>
+    <!-- Contenitore per l'header -->
+    <div id="header-container"></div>
 
     <main>
         <section id="projects-intro" class="container">
@@ -87,18 +79,11 @@
         </section>
     </main>
     
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="#" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-                <a href="https://www.behance.net/giadamorena1" target="_blank" rel="noopener noreferrer">BEHANCE</a>
-                <a href="https://www.instagram.com/giadamorena.photos/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-                <a href="mailto:giadamorenag@gmail.com">EMAIL</a>
-            </div>
-            <p class="copyright">© 2025 GIADA MORENA</p>
-        </div>
-    </footer>
+    <!-- Contenitore per il footer -->
+    <div id="footer-container"></div>
     
+    <!-- SCRIPT PRINCIPALE E LOADER -->
     <script src="script.js"></script>
+    <script src="loader.js"></script>
 </body>
 </html>

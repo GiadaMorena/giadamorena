@@ -55,7 +55,9 @@ if (clickableItems.length > 0 && lightbox) {
 
     const closeLightbox = () => {
         lightbox.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        if (!document.body.classList.contains('nav-open')) {
+            document.body.style.overflow = 'auto';
+        }
     };
 
     if(lightboxClose) {
@@ -65,30 +67,6 @@ if (clickableItems.length > 0 && lightbox) {
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
             closeLightbox();
-        }
-    });
-}
-
-// --- Logica Navigazione Mobile ---
-const navToggle = document.querySelector('.mobile-nav-toggle');
-const mobileNav = document.querySelector('.mobile-nav');
-
-if (navToggle && mobileNav) {
-    const toggleMenu = () => {
-        const isOpened = document.body.classList.toggle('nav-open');
-        navToggle.classList.toggle('is-active');
-        mobileNav.setAttribute('aria-hidden', !isOpened);
-    };
-
-    navToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleMenu();
-    });
-
-    // Chiude il menu se si clicca su un link
-    mobileNav.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') {
-            toggleMenu();
         }
     });
 }
