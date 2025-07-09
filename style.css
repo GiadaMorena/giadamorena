@@ -163,7 +163,7 @@ section.visible {
     align-items: flex-start;
     opacity: 1;
     transform: none;
-    padding-bottom: 100px; /* ** MODIFICA **: Aggiunto spazio inferiore */
+    padding-bottom: 100px; 
 }
 #gallery-intro, #projects-intro {
     padding-top: 70px;
@@ -491,5 +491,92 @@ footer .container {
     }
     .mini-feed-grid {
         gap: 10px;
+    }
+}
+
+/* ==========================================================================
+   Stili per Navigazione Mobile
+   ========================================================================== */
+
+/* Di base, il menu mobile e il suo bottone sono nascosti */
+.mobile-nav-toggle { display: none; }
+.mobile-nav { display: none; }
+
+
+@media (max-width: 768px) {
+    /* SU MOBILE: Nascondi nav desktop, mostra bottone hamburger */
+    .header-nav {
+        display: none;
+    }
+
+    .mobile-nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1003; /* Sopra tutto */
+    }
+
+    .mobile-nav-toggle .sr-only {
+        position: absolute;
+        width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0, 0, 0, 0);
+        white-space: nowrap; border-width: 0;
+    }
+
+    .mobile-nav-toggle .bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: var(--color-text);
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Animazione del bottone a croce */
+    .mobile-nav-toggle.is-active .bar:nth-child(1) { transform: translateY(9.5px) rotate(45deg); }
+    .mobile-nav-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .mobile-nav-toggle.is-active .bar:nth-child(3) { transform: translateY(-9.5px) rotate(-45deg); }
+
+
+    /* Stili del pannello menu che appare */
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-bg);
+        z-index: 1001; /* Sotto l'header ma sopra il contenuto */
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    /* Quando il menu è aperto */
+    body.nav-open .mobile-nav {
+        transform: translateX(0);
+    }
+    
+    body.nav-open {
+        overflow: hidden;
+    }
+
+    .mobile-nav a {
+        font-size: 1.5rem;
+        padding: 15px 30px;
+        color: var(--color-text);
+    }
+    .mobile-nav a:hover {
+        color: var(--color-accent-static);
     }
 }

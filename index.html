@@ -19,13 +19,30 @@
     <header id="main-header">
         <div class="container nav-wrapper">
             <div class="logo"><a href="index.html">GIADA MORENA</a></div>
-            <div class="header-nav">
+            
+            <!-- Navigazione Desktop -->
+            <nav class="header-nav">
                 <a href="progetti.html">PROGETTI</a>
                 <a href="fotografia.html">FOTOGRAFIA</a>
                 <a href="#contact">CONTATTI</a>
-            </div>
+            </nav>
+            
+            <!-- Bottone Hamburger -->
+            <button class="mobile-nav-toggle" aria-controls="mobile-nav" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
+
+    <!-- Pannello Menu Mobile -->
+    <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+        <a href="progetti.html">PROGETTI</a>
+        <a href="fotografia.html">FOTOGRAFIA</a>
+        <a href="#contact">CONTATTI</a>
+    </nav>
 
     <main>
         <section id="intro" class="container">
@@ -33,7 +50,6 @@
             <p class="hero-subtitle">Specialista in Digital Marketing, creo contenuti e strategie digitali che raccontano brand, coinvolgono community e generano risultati.</p>
             
             <div class="hero-cta-wrapper">
-                <!-- ** MODIFICA **: Aggiunta la classe 'cta-button--outline' -->
                 <a href="assets/CV-Giada-Morena.pdf" download class="cta-button cta-button--outline">SCARICA CV</a>
             </div>
 

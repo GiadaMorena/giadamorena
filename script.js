@@ -38,7 +38,6 @@ if (marquee) {
 }
 
 // Logica Galleria e Lightbox
-// ** MODIFICA **: Il selettore ora include sia .photo-item che .mini-feed-item
 const clickableItems = document.querySelectorAll('.photo-item, .mini-feed-item'); 
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
@@ -66,6 +65,30 @@ if (clickableItems.length > 0 && lightbox) {
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
             closeLightbox();
+        }
+    });
+}
+
+// --- Logica Navigazione Mobile ---
+const navToggle = document.querySelector('.mobile-nav-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+
+if (navToggle && mobileNav) {
+    const toggleMenu = () => {
+        const isOpened = document.body.classList.toggle('nav-open');
+        navToggle.classList.toggle('is-active');
+        mobileNav.setAttribute('aria-hidden', !isOpened);
+    };
+
+    navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    // Chiude il menu se si clicca su un link
+    mobileNav.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+            toggleMenu();
         }
     });
 }
