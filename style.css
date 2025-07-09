@@ -163,6 +163,7 @@ section.visible {
     align-items: flex-start;
     opacity: 1;
     transform: none;
+    padding-bottom: 100px; /* ** MODIFICA **: Aggiunto spazio inferiore */
 }
 #gallery-intro, #projects-intro {
     padding-top: 70px;
@@ -183,10 +184,14 @@ section.visible {
 
 .hero-subtitle {
     font-size: clamp(1rem, 3vw, 1.5rem);
-    margin: 40px 0 50px 0;
+    margin: 40px 0 0 0;
     max-width: 550px;
     color: var(--color-text);
     font-weight: 400;
+}
+
+.hero-cta-wrapper {
+    margin-top: 50px; 
 }
 
 /* Marquee */
@@ -317,7 +322,7 @@ section.visible {
     font-weight: 700;
     font-size: 1.2rem;
     border-radius: 8px;
-    border: none;
+    border: 2px solid transparent;
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -325,6 +330,19 @@ section.visible {
 .cta-button:hover {
     transform: scale(1.05) rotate(-2deg);
     box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.cta-button--outline {
+    background-image: none;
+    background-color: transparent;
+    border-color: var(--color-accent-static);
+    color: var(--color-accent-static);
+}
+
+.cta-button--outline:hover {
+    background-color: var(--color-accent-static);
+    color: var(--color-bg);
+    border-color: var(--color-accent-static);
 }
 
 .cta-buttons-wrapper {
@@ -401,7 +419,7 @@ footer .container {
 .project-list {
     display: flex;
     flex-direction: column;
-    gap: 80px; /* Spazio maggiore tra i progetti */
+    gap: 80px;
 }
 
 .project-card {
@@ -432,7 +450,7 @@ footer .container {
     aspect-ratio: 4 / 5; 
     overflow: hidden;
     border-radius: 8px;
-    cursor: pointer; /* ** MODIFICA ** Aggiunto per indicare cliccabilità */
+    cursor: pointer;
 }
 
 .mini-feed-item img {
