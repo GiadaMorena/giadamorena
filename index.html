@@ -1,149 +1,694 @@
 <!DOCTYPE html>
-<html lang="it">
+<html class="scroll-smooth" lang="it">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    
-    <title>Giada Morena - Digital Marketing & Content Strategy</title>
-    <meta content="Portfolio di Giada Morena. Strategia digitale, content creation e social media management per brand e aziende." name="description">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Giada Morena | Digital Marketing &amp; Data Specialist</title>
+<meta name="description" content="Portfolio di Giada Morena. Strategia digitale, content creation e social media management per brand e aziende. ITS Rizzoli 110/110."/>
+<link href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>GM</text></svg>" rel="icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary": "#000000",
+          "surface-container-high": "#e8e8e8",
+          "on-primary-fixed-variant": "#474746",
+          "on-background": "#1a1c1c",
+          "surface": "#f9f9f9",
+          "secondary-fixed": "#ffe16d",
+          "outline-variant": "#c4c7c7",
+          "on-tertiary-container": "#868382",
+          "primary-fixed": "#e5e2e1",
+          "secondary-container": "#fcd400",
+          "primary-fixed-dim": "#c8c6c5",
+          "secondary-fixed-dim": "#e9c400",
+          "surface-container-low": "#f3f3f3",
+          "on-error": "#ffffff",
+          "on-tertiary-fixed": "#1c1b1a",
+          "tertiary-fixed-dim": "#cac6c4",
+          "tertiary-container": "#1c1b1a",
+          "tertiary": "#000000",
+          "secondary": "#705d00",
+          "surface-bright": "#f9f9f9",
+          "on-error-container": "#93000a",
+          "surface-variant": "#e2e2e2",
+          "inverse-on-surface": "#f1f1f1",
+          "surface-container-highest": "#e2e2e2",
+          "surface-tint": "#5f5e5e",
+          "on-surface-variant": "#444748",
+          "error": "#ba1a1a",
+          "inverse-primary": "#c8c6c5",
+          "outline": "#747878",
+          "surface-container-lowest": "#ffffff",
+          "inverse-surface": "#2f3131",
+          "primary-container": "#1c1b1b",
+          "on-secondary-fixed": "#221b00",
+          "tertiary-fixed": "#e6e2df",
+          "background": "#f9f9f9",
+          "on-primary-container": "#858383",
+          "surface-container": "#eeeeee",
+          "on-secondary": "#ffffff",
+          "on-surface": "#1a1c1c",
+          "on-tertiary": "#ffffff",
+          "surface-dim": "#dadada",
+          "on-secondary-container": "#6e5c00",
+          "on-secondary-fixed-variant": "#544600",
+          "on-primary-fixed": "#1c1b1b",
+          "error-container": "#ffdad6",
+          "on-tertiary-fixed-variant": "#484645",
+          "on-primary": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "30px",
+          "lg": "30px",
+          "xl": "30px",
+          "full": "9999px"
+        },
+        "spacing": {
+          "container-max": "1280px",
+          "base": "8px",
+          "gutter": "24px",
+          "margin-mobile": "20px",
+          "section-gap": "120px"
+        },
+        "fontFamily": {
+          "headline-md": ["Inter"],
+          "display-xl": ["Inter"],
+          "body-lg": ["Inter"],
+          "headline-lg-mobile": ["Inter"],
+          "headline-lg": ["Inter"],
+          "label-sm": ["Inter"],
+          "body-md": ["Inter"]
+        },
+        "fontSize": {
+          "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+          "display-xl": ["96px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+          "body-lg": ["20px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "headline-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "headline-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .yellow-splash {
+    background: radial-gradient(circle, #fcd400 0%, transparent 70%);
+    filter: blur(40px);
+    opacity: 0.4;
+    z-index: -1;
+    will-change: transform;
+  }
+  .brutal-border {
+    border: 2px solid #000000;
+    border-radius: 30px;
+  }
+  .brutal-shadow {
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .brutal-shadow:hover {
+    transform: translate(-6px, -6px);
+    box-shadow: 10px 10px 0px #000000;
+  }
+  .brutal-shadow:active {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px #000000;
+  }
+  .transition-custom {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
 
-    <link href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>GM</text></svg>" rel="icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  /* Reveal on Scroll */
+  .reveal-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-hidden-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-hidden-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-visible {
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
+  }
+
+  /* Hero Staggered Words */
+  .stagger-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease;
+  }
+
+  /* Navigation Underline */
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fcd400;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Experience Card Enhancements */
+  .exp-card {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .exp-card:hover {
+    transform: scale(1.02) translate(-4px, -4px);
+    box-shadow: 12px 12px 0px #000;
+  }
+  .exp-card-yellow:hover {
+    border-color: #000;
+    background-color: #ffe16d;
+  }
+
+  /* Skills Interaction */
+  .skill-item {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+  }
+  .reveal-visible .skill-item {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Bounce Animation */
+  @keyframes bounce-gentle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-bounce-gentle {
+    animation: bounce-gentle 2s infinite ease-in-out;
+  }
+
+  /* Parallax Image */
+  .parallax-img-container {
+    overflow: hidden;
+    border-radius: 30px;
+  }
+  .parallax-img {
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+  }
+
+  /* Stagger delays */
+  .stagger-1 { transition-delay: 100ms; }
+  .stagger-2 { transition-delay: 200ms; }
+  .stagger-3 { transition-delay: 300ms; }
+  .stagger-4 { transition-delay: 400ms; }
+
+  /* Mobile Menu */
+  #mobile-menu {
+    display: none;
+  }
+  #mobile-menu.open {
+    display: flex;
+  }
+</style>
 </head>
-<body>
-    <div class="spotlight"></div>
+<body class="bg-surface text-primary font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-primary">
 
-    <!-- Contenitore per l'header -->
-    <div id="header-container"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full bg-surface z-50 border-b-2 border-primary">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto py-6">
+  <a class="font-headline-md text-headline-md font-black tracking-tighter uppercase text-primary" href="index.html">GIADA MORENA</a>
+  <div class="hidden md:flex items-center gap-8">
+    <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-primary transition-all duration-300" href="progetti.html">Progetti Social</a>
+    <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-primary transition-all duration-300" href="siti-web.html">Siti Web</a>
+    <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-primary transition-all duration-300" href="fotografia.html">Fotografia</a>
+    <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-primary transition-all duration-300" href="contatti.html">Contatti</a>
+    <a class="bg-secondary-container text-primary font-bold px-8 py-3 brutal-border uppercase hover:bg-primary hover:text-secondary-container transition-custom active:translate-y-1" href="contatti.html">LET'S TALK</a>
+  </div>
+  <button id="mobile-menu-btn" class="md:hidden" aria-label="Apri menu" aria-expanded="false">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+  </button>
+</nav>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="flex-col gap-4 px-margin-mobile pb-6 border-t-2 border-primary bg-surface">
+  <a class="block font-bold uppercase text-primary py-2 border-b border-outline-variant" href="progetti.html">Progetti Social</a>
+  <a class="block font-bold uppercase text-primary py-2 border-b border-outline-variant" href="siti-web.html">Siti Web</a>
+  <a class="block font-bold uppercase text-primary py-2 border-b border-outline-variant" href="fotografia.html">Fotografia</a>
+  <a class="block font-bold uppercase text-primary py-2 border-b border-outline-variant" href="contatti.html">Contatti</a>
+  <a class="inline-block mt-2 bg-secondary-container text-primary font-bold px-8 py-3 brutal-border uppercase" href="contatti.html">LET'S TALK</a>
+</div>
+</header>
 
-    <main>
-        <section id="intro" class="container">
-            <h1 class="hero-title">GIADA<br><span class="accent">MORENA</span></h1>
-            <p class="hero-subtitle">Specialista in Digital Marketing, creo contenuti e strategie digitali che raccontano brand, coinvolgono community e generano risultati.</p>
-            
-            <div class="hero-cta-wrapper">
-                <a href="assets/CV-Giada-Morena.pdf" download class="cta-button cta-button--outline">SCARICA CV</a>
+<main class="pt-24">
+
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-margin-mobile py-section-gap overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] yellow-splash" id="hero-bg-glow"></div>
+  <h1 class="font-display-xl text-[56px] md:text-display-xl uppercase max-w-6xl mb-8 relative z-10 leading-[0.9]" id="hero-title">
+    <span class="stagger-word block">THINK BIG.</span>
+    <span class="stagger-word block">START SMALL.</span>
+    <span class="stagger-word block">MOVE FAST.</span>
+  </h1>
+  <p class="reveal-hidden font-headline-md text-headline-md uppercase text-primary tracking-widest mb-12 relative z-10 opacity-0" style="transition-delay: 1s">
+    Digital Marketing &amp; Data Specialist
+  </p>
+  <div class="reveal-hidden opacity-0 flex flex-col sm:flex-row items-center gap-6" style="transition-delay: 1.3s">
+    <a class="group relative inline-flex items-center gap-3 font-label-sm text-label-sm uppercase bg-primary text-white px-12 py-6 brutal-border brutal-shadow hover:bg-secondary-container hover:text-primary transition-custom z-10" href="#esperienza">
+      Scopri il mio percorso
+      <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+    </a>
+    <a class="group relative inline-flex items-center gap-3 font-label-sm text-label-sm uppercase bg-secondary-container text-primary px-12 py-6 brutal-border brutal-shadow hover:bg-primary hover:text-white transition-custom z-10" href="assets/Giada%20Morena%20CV.pdf" download>
+      Scarica CV
+      <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">download</span>
+    </a>
+  </div>
+  <a class="animate-bounce-gentle text-primary mt-12 z-10" href="#esperienza">
+    <span class="material-symbols-outlined text-4xl">expand_more</span>
+  </a>
+</section>
+
+<!-- Marquee -->
+<div class="w-full bg-primary py-6 overflow-hidden whitespace-nowrap border-y-2 border-primary z-20 relative">
+  <div class="inline-block animate-[marquee_20s_linear_infinite] uppercase font-black text-secondary-container text-headline-md px-4">
+    MARKETING • ADV • CONTENT CREATION • SOCIAL MEDIA • SEO • DATA ANALYSIS • MARKETING • ADV • CONTENT CREATION • SOCIAL MEDIA • SEO • DATA ANALYSIS •&nbsp;
+  </div>
+  <div class="inline-block animate-[marquee_20s_linear_infinite] uppercase font-black text-secondary-container text-headline-md px-4">
+    MARKETING • ADV • CONTENT CREATION • SOCIAL MEDIA • SEO • DATA ANALYSIS • MARKETING • ADV • CONTENT CREATION • SOCIAL MEDIA • SEO • DATA ANALYSIS •&nbsp;
+  </div>
+</div>
+
+<!-- Esperienza Professionale -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap overflow-hidden" id="esperienza">
+  <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 reveal-hidden">
+    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase leading-none">
+      Esperienza<br/><span class="text-secondary-container" style="-webkit-text-stroke: 2px black;">Professionale</span>
+    </h2>
+    <p class="font-body-lg text-body-lg max-w-md text-right border-r-4 border-secondary-container pr-6">
+      Strategie basate sui dati, narrazioni che ispirano e una visione imprenditoriale orientata alla crescita.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- Card 1: Social Media Manager WRDigital -->
+    <div class="reveal-hidden exp-card exp-card-yellow brutal-border bg-secondary-container p-10 shadow-lg group stagger-1">
+      <div class="flex justify-between items-start mb-8">
+        <span class="font-label-sm text-label-sm bg-primary text-white px-4 py-1.5 uppercase rounded-full">Gennaio 2025 – Attuale</span>
+        <span class="material-symbols-outlined text-4xl text-primary group-hover:rotate-45 transition-transform duration-500">star</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md uppercase mb-4">Social Media Manager</h3>
+      <p class="font-label-sm text-label-sm text-primary font-bold uppercase mb-8">WRDigital</p>
+      <p class="font-body-md text-body-md text-primary mb-8 leading-relaxed">
+        Gestione strategica dei canali social, creazione di contenuti creativi e monitoraggio dei KPI per massimizzare la crescita organica e l'engagement dei brand.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <span class="skill-item bg-white px-4 py-1.5 text-label-sm font-bold border-2 border-primary uppercase rounded-full">SOCIAL MEDIA</span>
+        <span class="skill-item bg-white px-4 py-1.5 text-label-sm font-bold border-2 border-primary uppercase rounded-full stagger-1">STRATEGY</span>
+        <span class="skill-item bg-white px-4 py-1.5 text-label-sm font-bold border-2 border-primary uppercase rounded-full stagger-2">CONTENT</span>
+      </div>
+    </div>
+
+    <!-- Card 2: Campaign Manager Stage -->
+    <div class="reveal-hidden exp-card brutal-border bg-white p-10 shadow-lg group stagger-2">
+      <div class="flex justify-between items-start mb-8">
+        <span class="font-label-sm text-label-sm bg-primary text-secondary-container px-4 py-1.5 uppercase rounded-full">2025 • STAGE</span>
+        <span class="material-symbols-outlined text-4xl text-secondary-container group-hover:scale-125 transition-transform duration-500">monitoring</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md uppercase mb-4">Campaign Manager</h3>
+      <p class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-8">Agenzia YES S.P.A. | Varedo, MB</p>
+      <p class="font-body-md text-body-md mb-8 leading-relaxed">
+        Ho supportato il team nella pianificazione, esecuzione e monitoraggio di campagne advertising multicanale (Google Ads, Meta Ads). Analisi dei dati di performance e reportistica avanzata per ottimizzare le strategie e raggiungere i KPI dei clienti.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <span class="skill-item bg-surface-container-high px-4 py-1.5 text-label-sm font-bold border-2 border-primary rounded-full uppercase">DATA ANALYSIS</span>
+        <span class="skill-item bg-surface-container-high px-4 py-1.5 text-label-sm font-bold border-2 border-primary rounded-full uppercase stagger-1">GOOGLE ADS</span>
+        <span class="skill-item bg-surface-container-high px-4 py-1.5 text-label-sm font-bold border-2 border-primary rounded-full uppercase stagger-2">META ADS</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Card 3: Fondatrice CFI — featured full-width, layout orizzontale -->
+  <div class="mt-8 reveal-hidden exp-card exp-card-yellow brutal-border bg-secondary-container p-10 shadow-lg group stagger-3">
+    <div class="flex flex-col md:flex-row md:items-start gap-10">
+      <div class="flex-1">
+        <div class="flex items-start mb-8">
+          <span class="font-label-sm text-label-sm bg-primary text-white px-4 py-1.5 uppercase rounded-full">2019 – ATTUALE</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md uppercase mb-4">Fondatrice &amp; Direttrice Editoriale</h3>
+        <p class="font-label-sm text-label-sm text-primary font-bold uppercase mb-8">
+          <a href="https://calciofemminileitalia.it/" target="_blank" rel="noopener noreferrer" class="hover:underline">Calcio Femminile Italia</a>
+        </p>
+        <p class="font-body-md text-body-md text-primary leading-relaxed">
+          Ho ideato e lanciato il progetto editoriale definendo da zero la brand identity, la linea editoriale e la strategia di crescita digitale. Gestisco l'intero ecosistema: dalla creazione di contenuti SEO-oriented per il sito (WordPress) alla pianificazione e gestione della community sui canali social.
+        </p>
+      </div>
+      <div class="md:w-52 flex flex-col items-start gap-6 pt-2">
+        <span class="material-symbols-outlined text-6xl text-primary group-hover:rotate-12 transition-transform duration-500">rocket_launch</span>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-item bg-white px-4 py-1.5 text-label-sm font-bold border-2 border-primary rounded-full uppercase">ENTREPRENEURSHIP</span>
+          <span class="skill-item bg-white px-4 py-1.5 text-label-sm font-bold border-2 border-primary rounded-full uppercase stagger-1">SEO</span>
+          <span class="skill-item bg-white px-4 py-1.5 text-label-sm font-bold border-2 border-primary rounded-full uppercase stagger-2">WORDPRESS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Side cards: griglia 3 colonne -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+
+    <!-- Addetta Stampa Real Meda -->
+    <div class="reveal-hidden exp-card brutal-border bg-white p-8 shadow-lg transition-custom border-l-[12px] border-l-secondary-container stagger-4">
+      <div class="flex justify-between items-start mb-4">
+        <h3 class="font-headline-md text-headline-md uppercase">Addetta Stampa &amp; Social Media</h3>
+        <span class="text-on-surface-variant font-label-sm font-bold whitespace-nowrap ml-2">2022 – 2025</span>
+      </div>
+      <p class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-4">ASD Real Meda CF | Meda, MB</p>
+      <p class="font-body-md text-body-md">Ho gestito la strategia social, aumentando l'engagement e la crescita della community. Ho ideato e creato contenuti grafici per campagne digitali, curato le relazioni con i media e realizzato la copertura fotografica degli eventi.</p>
+    </div>
+
+    <!-- Editrice Lfootball -->
+    <div class="reveal-hidden exp-card brutal-border bg-white p-8 shadow-lg transition-custom border-l-[12px] border-l-primary stagger-4" style="transition-delay: 500ms">
+      <div class="flex justify-between items-start mb-4">
+        <h3 class="font-headline-md text-headline-md uppercase">Editrice</h3>
+        <span class="text-on-surface-variant font-label-sm font-bold whitespace-nowrap ml-2">2023 – 2024</span>
+      </div>
+      <p class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-4">Lfootball | San Mauro Torinese, TO</p>
+      <p class="font-body-md text-body-md">Ho redatto articoli e approfondimenti sul calcio femminile, affinando le tecniche di scrittura SEO-oriented e di storytelling sportivo per catturare e fidelizzare il pubblico.</p>
+    </div>
+
+    <!-- Editrice Per Sempre Calcio -->
+    <div class="reveal-hidden exp-card brutal-border bg-white p-8 shadow-lg transition-custom border-l-[12px] border-l-outline-variant stagger-4" style="transition-delay: 600ms">
+      <div class="flex justify-between items-start mb-4">
+        <h3 class="font-headline-md text-headline-md uppercase">Editrice</h3>
+        <span class="text-on-surface-variant font-label-sm font-bold whitespace-nowrap ml-2">2021 – 2022</span>
+      </div>
+      <p class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-4">Per Sempre Calcio</p>
+      <p class="font-body-md text-body-md">Prima esperienza nel giornalismo sportivo, dove ho sviluppato capacità di ricerca delle fonti e scrittura di articoli nel rispetto delle scadenze editoriali.</p>
+    </div>
+
+  </div>
+
+  <!-- Social Media Manager GSM -->
+  <div class="mt-10 reveal-hidden exp-card brutal-border bg-white p-10 shadow-lg transition-custom border-l-[12px] border-l-secondary-container">
+    <div class="flex justify-between items-start mb-4">
+      <h3 class="font-headline-md text-headline-md uppercase">Social Media Manager</h3>
+      <span class="text-on-surface-variant font-label-sm font-bold">2021</span>
+    </div>
+    <p class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-4">Group Sport Management | Online</p>
+    <p class="font-body-md text-body-md">Ho definito l'identità grafica e la linea editoriale per i profili social di atleti, costruendo la loro immagine digitale e gestendo la comunicazione diretta con la fan base.</p>
+  </div>
+
+</section>
+
+<!-- Skill & Formazione -->
+<section class="bg-primary text-white py-section-gap overflow-hidden rounded-[30px] mx-margin-mobile mb-section-gap" id="skills">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+      <!-- Left: Formazione -->
+      <div class="lg:col-span-5 reveal-hidden-left" id="formazione">
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-secondary-container mb-16">Formazione</h2>
+        <div class="relative pl-12 border-l-4 border-secondary-container space-y-16">
+
+          <!-- ITS Rizzoli -->
+          <div class="relative reveal-hidden stagger-1">
+            <span class="absolute -left-[64px] top-0 w-10 h-10 bg-secondary-container rounded-full brutal-border flex items-center justify-center text-primary font-black">01</span>
+            <h3 class="font-headline-md text-headline-md uppercase text-white mb-2">ITS Academy Angelo Rizzoli</h3>
+            <p class="text-secondary-container font-bold uppercase mb-6">Tecnico Superiore Marketing (Data Specialist) | Milano | 2023 – 2025</p>
+            <div class="inline-block bg-white text-primary font-black px-6 py-2 rounded-full brutal-border mb-6">
+              VOTO: <span class="counter" data-target="110">0</span>/110
             </div>
+            <p class="font-body-md text-on-primary-container leading-relaxed">Un percorso intensivo focalizzato sull'applicazione pratica di SEO, data analysis, marketing automation e content strategy per lo sviluppo del business.</p>
+          </div>
 
-        </section>
+          <!-- Erasmus Rotterdam -->
+          <div class="relative reveal-hidden stagger-2">
+            <span class="absolute -left-[64px] top-0 w-10 h-10 bg-secondary-container rounded-full brutal-border flex items-center justify-center text-primary font-black">02</span>
+            <h3 class="font-headline-md text-headline-md uppercase text-white mb-2">Project Work Internazionale (Erasmus+)</h3>
+            <p class="text-secondary-container font-bold uppercase mb-6">Hogeschool Rotterdam | Rotterdam, NL | Settembre 2024</p>
+            <p class="font-body-md text-on-primary-container leading-relaxed">Ho collaborato con studenti della Hogeschool Academy per sviluppare soluzioni di marketing innovative e approfondito le strategie operative di agenzie leader del settore come Dept.</p>
+          </div>
 
-        <div class="marquee">
-            <div class="marquee-inner">
-                <span>MARKETING</span><span class="outline">ADV</span><span>CONTENT CREATION</span><span class="outline">SOCIAL MEDIA</span><span>SEO</span>
-                <span>MARKETING</span><span class="outline">ADV</span><span>CONTENT CREATION</span><span class="outline">SOCIAL MEDIA</span><span>SEO</span>
-            </div>
+          <!-- Diploma -->
+          <div class="relative reveal-hidden stagger-3">
+            <span class="absolute -left-[64px] top-0 w-10 h-10 bg-secondary-container rounded-full brutal-border flex items-center justify-center text-primary font-black">03</span>
+            <h3 class="font-headline-md text-headline-md uppercase text-white mb-2">Diploma in Informatica &amp; Telecomunicazioni</h3>
+            <p class="text-secondary-container font-bold uppercase mb-6">IIS Majorana (2022-23) &amp; Istituto Brianteo (2018-22)</p>
+            <p class="font-body-md text-on-primary-container leading-relaxed">Solida base tecnica in programmazione, gestione di database e infrastrutture di rete, competenze fondamentali per comprendere a fondo il mondo digitale.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: Skills -->
+      <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-10 reveal-hidden-right">
+
+        <!-- Strategy & Data -->
+        <div class="bg-on-background p-8 brutal-border border-on-primary-fixed-variant exp-card group relative">
+          <div class="absolute -top-4 -right-2 bg-secondary-container text-primary text-[11px] font-black px-4 py-1 brutal-border uppercase rounded-full">Expertise</div>
+          <div class="flex items-center gap-4 mb-8">
+            <span class="material-symbols-outlined text-4xl text-secondary-container flex-shrink-0">database</span>
+            <h3 class="text-[22px] font-black uppercase leading-tight">Strategy &amp; Data</h3>
+          </div>
+          <ul class="space-y-5">
+            <li class="skill-item flex items-center justify-between border-b border-white/10 pb-3 hover:pl-4 transition-all group/item">
+              <span class="text-[13px] font-bold uppercase tracking-wide">Digital Strategy</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+            <li class="skill-item flex items-center justify-between border-b border-white/10 pb-3 hover:pl-4 transition-all group/item stagger-1">
+              <span class="text-[13px] font-bold uppercase tracking-wide">SEO / SEM</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+            <li class="skill-item flex items-center justify-between border-b border-white/10 pb-3 hover:pl-4 transition-all group/item stagger-2">
+              <span class="text-[13px] font-bold uppercase tracking-wide">Google Analytics &amp; KPI</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+            <li class="skill-item flex items-center justify-between border-b border-white/10 pb-3 hover:pl-4 transition-all group/item stagger-3">
+              <span class="text-[13px] font-bold uppercase tracking-wide">Google Ads &amp; Meta Ads</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+            <li class="skill-item flex items-center justify-between border-b border-white/10 pb-3 hover:pl-4 transition-all group/item stagger-4">
+              <span class="text-[13px] font-bold uppercase tracking-wide">Marketing Automation</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+            <li class="skill-item flex items-center justify-between pb-3 hover:pl-4 transition-all group/item">
+              <span class="text-[13px] font-bold uppercase tracking-wide">Community Management</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+          </ul>
         </div>
 
-        <section id="experience" class="container">
-            <h2>ESPERIENZA<span class="accent">.</span></h2>
-            <div class="card-list">
-                <div class="card">
-                    <h3>Campaign Manager (Stage)</h3>
-                    <p class="item-meta">AGENZIA YES S.P.A. | VAREDO, MB | 2025</p>
-                    <p>Ho supportato il team nella pianificazione, esecuzione e monitoraggio di campagne di advertising multicanale (Google Ads, Meta Ads). Ho contribuito all'analisi dei dati di performance e alla creazione di report per ottimizzare le strategie e raggiungere i KPI dei clienti.</p>
-                </div>
-                <div class="card">
-                    <h3>Fondatrice e Direttrice Editoriale</h3>
-                    <p class="item-meta"><a href="https://calciofemminileitalia.it/" target="_blank" rel="noopener noreferrer">CALCIO FEMMINILE ITALIA</a> | ONLINE | 2019 – ATTUALE</p>
-                    <p>Ho ideato e lanciato il progetto editoriale, definendo da zero la brand identity, la linea editoriale e la strategia di crescita digitale. Gestisco l'intero ecosistema: dalla creazione di contenuti SEO-oriented per il sito (WordPress) alla pianificazione e gestione della community sui canali social, consolidando il brand come un punto di riferimento nel settore.</p>
-                </div>
-                <div class="card">
-                    <h3>Addetta Stampa e Social Media</h3>
-                    <p class="item-meta">ASD REAL MEDA CF | MEDA, MB | 2022 – 2025</p>
-                    <p>Ho gestito la strategia social, aumentando l'engagement e la crescita della community. Ho ideato e creato contenuti grafici e visivi per campagne digitali, curato le relazioni con i media e realizzato la copertura fotografica degli eventi.</p>
-                </div>
-                <div class="card">
-                    <h3>Editrice</h3>
-                    <p class="item-meta">LFOOTBALL | SAN MAURO TORINESE, TO | 2023 – 2024</p>
-                    <p>Ho redatto articoli e approfondimenti sul calcio femminile, affinando le tecniche di scrittura SEO-oriented e di storytelling sportivo per catturare e fidelizzare il pubblico.</p>
-                </div>
-                <div class="card">
-                    <h3>Editrice</h3>
-                    <p class="item-meta">PER SEMPRE CALCIO | 2021 – 2022</p>
-                    <p>Prima esperienza nel giornalismo sportivo, dove ho sviluppato capacità di ricerca delle fonti e scrittura di articoli nel rispetto delle scadenze editoriali.</p>
-                </div>
-                <div class="card">
-                    <h3>Social Media Manager</h3>
-                    <p class="item-meta">GROUP SPORT MANAGEMENT | ONLINE | 2021</p>
-                    <p>Ho definito l'identità grafica e la linea editoriale per i profili social di atleti, costruendo la loro immagine digitale e gestendo la comunicazione diretta con la fan base.</p>
-                </div>
-            </div>
-        </section>
+        <!-- Content & Creation -->
+        <div class="bg-on-background p-8 brutal-border border-on-primary-fixed-variant exp-card group relative">
+          <div class="absolute -top-4 -right-2 bg-white text-primary text-[11px] font-black px-4 py-1 brutal-border uppercase rounded-full">Creative</div>
+          <div class="flex items-center gap-4 mb-8">
+            <span class="material-symbols-outlined text-4xl text-secondary-container flex-shrink-0">draw</span>
+            <h3 class="text-[22px] font-black uppercase leading-tight">Content &amp; Creation</h3>
+          </div>
+          <ul class="space-y-5">
+            <li class="skill-item flex items-center justify-between border-b border-white/10 pb-3 hover:pl-4 transition-all group/item">
+              <span class="text-[13px] font-bold uppercase tracking-wide">Adobe Suite (Ps, Ai)</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+            <li class="skill-item flex items-center justify-between border-b border-white/10 pb-3 hover:pl-4 transition-all group/item stagger-1">
+              <span class="text-[13px] font-bold uppercase tracking-wide">Figma &amp; Canva</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+            <li class="skill-item flex items-center justify-between border-b border-white/10 pb-3 hover:pl-4 transition-all group/item stagger-2">
+              <span class="text-[13px] font-bold uppercase tracking-wide">Fotografia Sportiva</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+            <li class="skill-item flex items-center justify-between border-b border-white/10 pb-3 hover:pl-4 transition-all group/item stagger-3">
+              <span class="text-[13px] font-bold uppercase tracking-wide">Copywriting &amp; Storytelling</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+            <li class="skill-item flex items-center justify-between border-b border-white/10 pb-3 hover:pl-4 transition-all group/item stagger-4">
+              <span class="text-[13px] font-bold uppercase tracking-wide">WordPress</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+            <li class="skill-item flex items-center justify-between pb-3 hover:pl-4 transition-all group/item">
+              <span class="text-[13px] font-bold uppercase tracking-wide">HTML &amp; CSS</span>
+              <span class="material-symbols-outlined text-secondary-container opacity-0 group-hover/item:opacity-100 transition-opacity">check_circle</span>
+            </li>
+          </ul>
+        </div>
 
-        <section id="education" class="container">
-            <h2>FORMAZIONE<span class="accent">.</span></h2>
-            <div class="card-list">
-                <div class="card">
-                    <h3>Tecnico Superiore Marketing (Data Specialist)</h3>
-                    <p class="item-meta">ITS ACADEMY ANGELO RIZZOLI | MILANO | 2023 – 2025</p>
-                    
-                    <!-- ===== BLOCCO VALUTAZIONE AGGIUNTO QUI ===== -->
-                    <div class="evaluation-highlight">
-                        <span>VALUTAZIONE FINALE: <strong>110/110</strong></span>
-                    </div>
-                    
-                    <p>Un percorso intensivo focalizzato sull'applicazione pratica di SEO, data analysis, marketing automation e content strategy per lo sviluppo del business.</p>
-                </div>
-                <div class="card">
-                    <h3>Project Work Internazionale (Erasmus+)</h3>
-                    <p class="item-meta">HOGESCHOOL ROTTERDAM | ROTTERDAM, NL | SET 2024</p>
-                    <p>Partecipazione a un project work internazionale in partnership con l'ITS Rizzoli. Ho collaborato con studenti della Hogeschool Academy per sviluppare soluzioni di marketing innovative e approfondito le strategie operative di agenzie leader del settore come Dept.</p>
-                </div>
-                <div class="card">
-                    <h3>Diploma in Informatica e Telecomunicazioni</h3>
-                    <p class="item-meta">IIS MAJORANA (2022-23) & ISTITUTO BRIANTEO (2018-22)</p>
-                    <p>Ho acquisito una solida base tecnica in programmazione, gestione di database e infrastrutture di rete, competenze fondamentali per comprendere a fondo il mondo digitale.</p>
-                </div>
-            </div>
-        </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section id="skills" class="container">
-            <h2>COMPETENZE<span class="accent">.</span></h2>
-            <div class="skills-grid-container">
-                <div class="skills-category">
-                    <h4>Strategy & Data</h4>
-                    <ul>
-                        <li>Digital Strategy</li>
-                        <li>SEO</li>
-                        <li>Content Marketing</li>
-                        <li>Google Analytics</li>
-                        <li>Google Ads</li>
-                        <li>Meta Business Suite</li>
-                        <li>Marketing Automation</li>
-                        <li>Community Management</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h4>Content & Creation</h4>
-                    <ul>
-                        <li>Adobe Suite (Ps, Ai)</li>
-                        <li>Figma & Canva</li>
-                        <li>Fotografia Sportiva</li>
-                        <li>Copywriting & Storytelling</li>
-                        <li>WordPress</li>
-                        <li>HTML & CSS</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<!-- Project Work Rotterdam -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap overflow-hidden">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div class="order-2 lg:order-1 reveal-hidden-left parallax-img-container shadow-2xl border-2 border-primary">
+      <img alt="Project Work Rotterdam — Erasmus+ Hogeschool Rotterdam" class="parallax-img w-full aspect-video object-cover scale-110" src="images/Rotterdam.png"/>
+    </div>
+    <div class="order-1 lg:order-2 reveal-hidden-right">
+      <div class="inline-block bg-secondary-container text-primary font-black px-6 py-1.5 mb-8 brutal-border uppercase text-label-sm rounded-full">International Experience</div>
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-10 leading-tight">Focus: Project Work Rotterdam</h2>
+      <p class="font-body-lg text-body-lg mb-10 leading-relaxed">
+        Collaborazione internazionale con la <strong>Hogeschool Rotterdam</strong>. Un'immersione nelle dinamiche delle agenzie globali, sviluppando strategie di marketing innovative e affrontando brief reali per brand di respiro mondiale.
+      </p>
+      <div class="grid grid-cols-2 gap-6">
+        <div class="exp-card bg-surface-container-high p-6 brutal-border hover:bg-secondary-container transition-colors duration-500">
+          <h4 class="font-headline-md text-headline-md text-primary">DEPT®</h4>
+          <p class="font-label-sm uppercase font-bold text-on-surface-variant">Agency Insights</p>
+        </div>
+        <div class="exp-card bg-surface-container-high p-6 brutal-border hover:bg-secondary-container transition-colors duration-500">
+          <h4 class="font-headline-md text-headline-md text-primary">GLOBALE</h4>
+          <p class="font-label-sm uppercase font-bold text-on-surface-variant">Collaboration</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section id="contact">
-            <div class="container">
-                <h2>LET'S CREATE<span class="accent">.</span></h2>
-                <p>Credo nel potere delle storie e dei dati per creare connessioni autentiche. Se hai un progetto ambizioso o vuoi dare una nuova spinta alla tua comunicazione digitale, parliamone.</p>
-                <a href="mailto:giadamorenag@gmail.com" class="cta-button">SCRIVIMI</a>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Contenitore per il footer -->
-    <div id="footer-container"></div>
-    
-    <!-- SCRIPT PRINCIPALE E LOADER -->
-    <script src="script.js"></script>
-    <script src="loader.js"></script>
+<!-- CTA Finale -->
+<section class="bg-secondary-container py-section-gap overflow-hidden rounded-[30px] mx-margin-mobile mb-section-gap border-2 border-primary" id="contatti-cta">
+  <div class="max-w-container-max mx-auto px-margin-mobile text-center reveal-hidden">
+    <h2 class="font-display-xl text-[44px] md:text-display-xl uppercase mb-16 max-w-5xl mx-auto leading-[0.95]">
+      Lavoriamo insieme al tuo prossimo grande obiettivo
+    </h2>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+      <a class="w-full md:w-auto bg-primary text-white font-black text-headline-md px-14 py-8 brutal-border brutal-shadow hover:bg-black hover:text-secondary-container transition-custom uppercase active:translate-y-1" href="mailto:giadamorenag@gmail.com">
+        Contattami
+      </a>
+      <a class="w-full md:w-auto bg-white text-primary font-black text-headline-md px-14 py-8 brutal-border brutal-shadow hover:bg-surface-variant transition-custom uppercase active:translate-y-1" href="assets/Giada%20Morena%20CV.pdf" download>
+        Scarica CV
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary rounded-t-[30px] border-t-4 border-secondary-container">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-gutter py-20 max-w-container-max mx-auto">
+    <div class="mb-12 md:mb-0 text-center md:text-left">
+      <div class="font-headline-lg text-headline-lg font-black text-secondary-container leading-none">GIADA MORENA</div>
+      <p class="text-on-primary-container font-label-sm uppercase mt-4 font-bold">© 2025 GIADA MORENA. ALL RIGHTS RESERVED.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-10">
+      <a class="text-on-primary-container uppercase font-black hover:text-secondary-container hover:scale-110 transition-all duration-300" href="https://www.linkedin.com/in/giada-morena-377a53217/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="text-on-primary-container uppercase font-black hover:text-secondary-container hover:scale-110 transition-all duration-300" href="https://www.behance.net/giadamorena1" target="_blank" rel="noopener noreferrer">Behance</a>
+      <a class="text-on-primary-container uppercase font-black hover:text-secondary-container hover:scale-110 transition-all duration-300" href="https://www.instagram.com/giadamorena.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="text-on-primary-container uppercase font-black hover:text-secondary-container hover:scale-110 transition-all duration-300" href="mailto:giadamorenag@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="bg-on-background py-8 text-center rounded-t-[30px]">
+    <span class="text-on-primary-fixed-variant font-label-sm tracking-[0.2em] uppercase font-bold">Precisione Dati • Impatto Creativo • Visione Strategica</span>
+  </div>
+</footer>
+
+<style>
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+
+<script>
+  // Mobile Menu Toggle
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    mobileBtn.setAttribute('aria-expanded', isOpen);
+    mobileBtn.querySelector('.material-symbols-outlined').textContent = isOpen ? 'close' : 'menu';
+  });
+
+  // Reveal on Scroll
+  const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        const counter = entry.target.querySelector('.counter');
+        if (counter && !counter.dataset.started) animateCounter(counter);
+      }
+    });
+  }, observerOptions);
+  document.querySelectorAll('.reveal-hidden, .reveal-hidden-left, .reveal-hidden-right').forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // Counter Animation
+  function animateCounter(el) {
+    el.dataset.started = "true";
+    const target = +el.dataset.target;
+    const inc = target / (2000 / 16);
+    let current = 0;
+    const update = () => {
+      current += inc;
+      if (current < target) { el.innerText = Math.ceil(current); requestAnimationFrame(update); }
+      else { el.innerText = target; }
+    };
+    update();
+  }
+
+  // Hero Words Animation
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.stagger-word').forEach((word, i) => {
+      setTimeout(() => {
+        word.style.opacity = '1';
+        word.style.transform = 'translateY(0)';
+      }, (i * 200) + 300);
+    });
+    // Trigger reveal for above-fold elements
+    setTimeout(() => {
+      document.querySelectorAll('.reveal-hidden').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add('reveal-visible');
+        }
+      });
+    }, 1400);
+  });
+
+  // Mouse Parallax
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5);
+    const y = (e.clientY / window.innerHeight - 0.5);
+    const splash = document.querySelector('#hero-bg-glow');
+    if (splash) splash.style.transform = `translate(calc(-50% + ${x * 60}px), calc(-50% + ${y * 60}px))`;
+    const parallaxImg = document.querySelector('.parallax-img');
+    if (parallaxImg) parallaxImg.style.transform = `scale(1.1) translate(${x * -30}px, ${y * -30}px)`;
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
 </body>
 </html>

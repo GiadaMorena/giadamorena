@@ -1,89 +1,294 @@
 <!DOCTYPE html>
-<html lang="it">
+<html class="scroll-smooth" lang="it">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    
-    <title>Progetti Social - Giada Morena Portfolio</title>
-    <meta content="Una selezione di progetti di social media management curati da Giada Morena." name="description">
-
-    <link href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>GM</text></svg>" rel="icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Progetti Social | Giada Morena — Digital Marketing &amp; Data Specialist</title>
+<meta name="description" content="Una panoramica visiva dei profili Instagram gestiti da Giada Morena: Calcio Femminile Italia, ASD Real Meda CF, Instant Marketing."/>
+<link href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>GM</text></svg>" rel="icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary": "#000000", "surface-container-high": "#e8e8e8", "on-primary-fixed-variant": "#474746",
+          "on-background": "#1a1c1c", "surface": "#f9f9f9", "secondary-fixed": "#ffe16d",
+          "outline-variant": "#c4c7c7", "on-tertiary-container": "#868382", "primary-fixed": "#e5e2e1",
+          "secondary-container": "#fcd400", "primary-fixed-dim": "#c8c6c5", "secondary-fixed-dim": "#e9c400",
+          "surface-container-low": "#f3f3f3", "on-error": "#ffffff", "on-tertiary-fixed": "#1c1b1a",
+          "tertiary-fixed-dim": "#cac6c4", "tertiary-container": "#1c1b1a", "tertiary": "#000000",
+          "secondary": "#705d00", "surface-bright": "#f9f9f9", "on-error-container": "#93000a",
+          "surface-variant": "#e2e2e2", "inverse-on-surface": "#f1f1f1", "surface-container-highest": "#e2e2e2",
+          "surface-tint": "#5f5e5e", "on-surface-variant": "#444748", "error": "#ba1a1a",
+          "inverse-primary": "#c8c6c5", "outline": "#747878", "surface-container-lowest": "#ffffff",
+          "inverse-surface": "#2f3131", "primary-container": "#1c1b1b", "on-secondary-fixed": "#221b00",
+          "tertiary-fixed": "#e6e2df", "background": "#f9f9f9", "on-primary-container": "#858383",
+          "surface-container": "#eeeeee", "on-secondary": "#ffffff", "on-surface": "#1a1c1c",
+          "on-tertiary": "#ffffff", "surface-dim": "#dadada", "on-secondary-container": "#6e5c00",
+          "on-secondary-fixed-variant": "#544600", "on-primary-fixed": "#1c1b1b",
+          "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#484645", "on-primary": "#ffffff"
+        },
+        "borderRadius": { "DEFAULT": "30px", "lg": "30px", "xl": "30px", "full": "9999px", "3xl": "30px" },
+        "spacing": { "container-max": "1280px", "base": "8px", "gutter": "24px", "margin-mobile": "20px", "section-gap": "120px" },
+        "fontFamily": { "headline-md": ["Inter"], "display-xl": ["Inter"], "body-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-lg": ["Inter"], "label-sm": ["Inter"], "body-md": ["Inter"] },
+        "fontSize": {
+          "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+          "display-xl": ["96px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+          "body-lg": ["20px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "headline-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "headline-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background-color: #fcd400; transition: width 0.3s ease; }
+  .nav-link:hover::after { width: 100%; }
+  .reveal-hidden { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+  .reveal-visible { opacity: 1 !important; transform: translate(0,0) !important; }
+  .project-card-hover { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  .project-card-hover:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0px #000; }
+  /* Photo feed grid */
+  .mini-feed { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .mini-feed-item { aspect-ratio: 1; overflow: hidden; border: 2px solid #000; border-radius: 12px; }
+  .mini-feed-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+  .mini-feed-item:hover img { transform: scale(1.08); }
+  /* Lightbox */
+  .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border: 3px solid #fcd400; border-radius: 12px; }
+  .lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 3rem; color: #fcd400; cursor: pointer; line-height: 1; }
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: flex; }
+</style>
 </head>
-<body>
-    <div class="spotlight"></div>
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">×</span>
-        <img class="lightbox-content" id="lightbox-img">
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-secondary-container">
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt=""/>
+</div>
+
+<!-- Header -->
+<header class="bg-surface border-b-2 border-primary fixed top-0 left-0 right-0 z-50">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto py-6">
+    <a class="font-headline-md text-headline-md font-black tracking-tighter uppercase text-primary" href="index.html">GIADA MORENA</a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-primary border-b-2 border-primary font-bold uppercase translate-y-0.5" href="progetti.html">Progetti Social</a>
+      <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-primary transition-all duration-300" href="siti-web.html">Siti Web</a>
+      <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-primary transition-all duration-300" href="fotografia.html">Fotografia</a>
+      <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-primary transition-all duration-300" href="contatti.html">Contatti</a>
+    </nav>
+    <a class="hidden md:inline-block bg-secondary-container text-primary font-bold px-6 py-2 uppercase text-label-sm border-2 border-primary hover:bg-primary hover:text-secondary-container transition-all duration-300 rounded-3xl" href="contatti.html">LET'S TALK</a>
+    <button id="mobile-menu-btn" class="md:hidden" aria-label="Apri menu">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="flex-col gap-4 px-margin-mobile pb-6 border-t-2 border-primary bg-surface">
+    <a class="block font-bold uppercase text-primary py-2 border-b border-outline-variant" href="progetti.html">Progetti Social</a>
+    <a class="block font-bold uppercase text-primary py-2 border-b border-outline-variant" href="siti-web.html">Siti Web</a>
+    <a class="block font-bold uppercase text-primary py-2 border-b border-outline-variant" href="fotografia.html">Fotografia</a>
+    <a class="block font-bold uppercase text-primary py-2" href="contatti.html">Contatti</a>
+  </div>
+</header>
+
+<main class="pt-[100px]">
+
+  <!-- Hero -->
+  <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap">
+    <div class="border-l-8 border-primary pl-8">
+      <h1 class="font-display-xl text-[56px] md:text-display-xl uppercase mb-6 leading-none">PROGETTI<br>SOCIAL<span class="text-secondary-container" style="-webkit-text-stroke: 2px black;">.</span></h1>
+      <p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant">
+        Una panoramica visiva dei profili Instagram che ho gestito, curandone la strategia, i contenuti e la crescita della community.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-section-gap space-y-32">
+
+    <!-- Progetto 1: Calcio Femminile Italia -->
+    <div class="reveal-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <span class="bg-primary text-secondary-container font-label-sm text-label-sm px-4 py-1.5 uppercase rounded-full">2019 – Attuale</span>
+            <span class="bg-secondary-container text-primary font-label-sm text-label-sm px-4 py-1.5 uppercase border-2 border-primary rounded-full">Fondatrice</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-6 leading-tight">Calcio Femminile Italia</h2>
+          <p class="font-body-lg text-body-lg mb-8 text-on-surface-variant leading-relaxed">
+            Gestione completa del profilo Instagram del mio progetto editoriale. Ho curato la content strategy, la creazione grafica dei post, la gestione della community e le campagne di crescita, costruendo un'audience fidelizzata e autorevole nel settore.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-10">
+            <span class="bg-surface-container-high border-2 border-primary px-4 py-1.5 font-label-sm font-bold uppercase rounded-full">CONTENT STRATEGY</span>
+            <span class="bg-surface-container-high border-2 border-primary px-4 py-1.5 font-label-sm font-bold uppercase rounded-full">COMMUNITY MGMT</span>
+            <span class="bg-surface-container-high border-2 border-primary px-4 py-1.5 font-label-sm font-bold uppercase rounded-full">GRAPHIC DESIGN</span>
+          </div>
+          <a class="group inline-flex items-center gap-3 bg-secondary-container text-primary font-bold uppercase px-10 py-5 border-2 border-primary project-card-hover" href="https://www.instagram.com/calciofemminile_italia/" target="_blank" rel="noopener noreferrer">
+            Visita il Profilo
+            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_outward</span>
+          </a>
+        </div>
+        <div>
+          <div class="mini-feed" id="feed-cfi">
+            <div class="mini-feed-item"><img src="images/projects/cfi/post-01.jpg" alt="Post Instagram Calcio Femminile Italia 1" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/cfi/post-02.jpg" alt="Post Instagram Calcio Femminile Italia 2" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/cfi/post-03.jpg" alt="Post Instagram Calcio Femminile Italia 3" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/cfi/post-04.jpg" alt="Post Instagram Calcio Femminile Italia 4" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/cfi/post-05.jpg" alt="Post Instagram Calcio Femminile Italia 5" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/cfi/post-06.jpg" alt="Post Instagram Calcio Femminile Italia 6" loading="lazy"/></div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Contenitore per l'header -->
-    <div id="header-container"></div>
+    <!-- Divider -->
+    <div class="w-full h-0.5 bg-primary opacity-20"></div>
 
-    <main>
-        <section id="projects-intro" class="container">
-            <h1 class="page-title">PROGETTI<br>SOCIAL<span class="accent">.</span></h1>
-            <p class="hero-subtitle">Una panoramica visiva dei profili Instagram che ho gestito, curandone la strategia, i contenuti e la crescita della community.</p>
-        </section>
-        
-        <section id="projects-list-section" class="container">
-            <div class="project-list">
-                <!-- Progetto Calcio Femminile Italia -->
-                <div class="project-card">
-                    <h3>Calcio Femminile Italia</h3>
-                    <p>Gestione completa del profilo Instagram del mio progetto editoriale. Ho curato la content strategy, la creazione grafica dei post, la gestione della community e le campagne di crescita, costruendo un'audience fidelizzata e autorevole nel settore.</p>
-                    <div class="mini-feed-grid">
-                        <div class="mini-feed-item"><img src="images/projects/cfi/post-01.jpg" alt="Post Instagram Calcio Femminile Italia"></div>
-                        <div class="mini-feed-item"><img src="images/projects/cfi/post-02.jpg" alt="Post Instagram Calcio Femminile Italia"></div>
-                        <div class="mini-feed-item"><img src="images/projects/cfi/post-03.jpg" alt="Post Instagram Calcio Femminile Italia"></div>
-                        <div class="mini-feed-item"><img src="images/projects/cfi/post-04.jpg" alt="Post Instagram Calcio Femminile Italia"></div>
-                        <div class="mini-feed-item"><img src="images/projects/cfi/post-05.jpg" alt="Post Instagram Calcio Femminile Italia"></div>
-                        <div class="mini-feed-item"><img src="images/projects/cfi/post-06.jpg" alt="Post Instagram Calcio Femminile Italia"></div>
-                    </div>
-                    <a href="https://www.instagram.com/calciofemminile_italia/" target="_blank" rel="noopener noreferrer" class="project-cta-button">VISITA IL PROFILO</a>
-                </div>
+    <!-- Progetto 2: ASD Real Meda CF -->
+    <div class="reveal-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div class="order-2 lg:order-1">
+          <div class="mini-feed">
+            <div class="mini-feed-item"><img src="images/projects/realmeda/post-01.jpg" alt="Post Instagram Real Meda 1" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/realmeda/post-02.jpg" alt="Post Instagram Real Meda 2" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/realmeda/post-03.jpg" alt="Post Instagram Real Meda 3" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/realmeda/post-04.jpg" alt="Post Instagram Real Meda 4" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/realmeda/post-05.jpg" alt="Post Instagram Real Meda 5" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/realmeda/post-06.jpg" alt="Post Instagram Real Meda 6" loading="lazy"/></div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="bg-primary text-secondary-container font-label-sm text-label-sm px-4 py-1.5 uppercase rounded-full">2022 – 2025</span>
+            <span class="bg-secondary-container text-primary font-label-sm text-label-sm px-4 py-1.5 uppercase border-2 border-primary rounded-full">Addetta Stampa</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-6 leading-tight">ASD Real Meda CF</h2>
+          <p class="font-body-lg text-body-lg mb-8 text-on-surface-variant leading-relaxed">
+            In qualità di Addetta Stampa e Social Media, ho gestito la comunicazione visiva e strategica del club su Instagram. Ho definito il tono di voce, creato i contenuti per le partite (match-day, formazioni, risultati) e raccontato la vita della squadra per aumentare l'engagement dei tifosi.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-10">
+            <span class="bg-surface-container-high border-2 border-primary px-4 py-1.5 font-label-sm font-bold uppercase rounded-full">SOCIAL MEDIA</span>
+            <span class="bg-surface-container-high border-2 border-primary px-4 py-1.5 font-label-sm font-bold uppercase rounded-full">PRESS OFFICE</span>
+            <span class="bg-surface-container-high border-2 border-primary px-4 py-1.5 font-label-sm font-bold uppercase rounded-full">FOTOGRAFIA</span>
+          </div>
+          <a class="group inline-flex items-center gap-3 bg-secondary-container text-primary font-bold uppercase px-10 py-5 border-2 border-primary project-card-hover" href="https://www.instagram.com/realmedacf/" target="_blank" rel="noopener noreferrer">
+            Visita il Profilo
+            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_outward</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
-                <!-- Progetto Real Meda -->
-                <div class="project-card">
-                    <h3>ASD Real Meda CF</h3>
-                    <p>In qualità di Addetta Stampa e Social Media, ho gestito la comunicazione visiva e strategica del club su Instagram. Ho definito il tono di voce, creato i contenuti per le partite (match-day, formazioni, risultati) e raccontato la vita della squadra per aumentare l'engagement dei tifosi.</p>
-                    <div class="mini-feed-grid">
-                        <div class="mini-feed-item"><img src="images/projects/realmeda/post-01.jpg" alt="Post Instagram Real Meda"></div>
-                        <div class="mini-feed-item"><img src="images/projects/realmeda/post-02.jpg" alt="Post Instagram Real Meda"></div>
-                        <div class="mini-feed-item"><img src="images/projects/realmeda/post-03.jpg" alt="Post Instagram Real Meda"></div>
-                        <div class="mini-feed-item"><img src="images/projects/realmeda/post-04.jpg" alt="Post Instagram Real Meda"></div>
-                        <div class="mini-feed-item"><img src="images/projects/realmeda/post-05.jpg" alt="Post Instagram Real Meda"></div>
-                        <div class="mini-feed-item"><img src="images/projects/realmeda/post-06.jpg" alt="Post Instagram Real Meda"></div>
-                    </div>
-                    <a href="https://www.instagram.com/realmedacf/" target="_blank" rel="noopener noreferrer" class="project-cta-button">VISITA IL PROFILO</a>
-                </div>
+    <!-- Divider -->
+    <div class="w-full h-0.5 bg-primary opacity-20"></div>
 
-                <!-- Progetto Instant Marketing -->
-                <div class="project-card">
-                    <h3>Instant Marketing</h3>
-                    <p>Ho contribuito alla definizione e creazione di contenuti per il profilo formativo di Instant Marketing, focalizzandomi sulla produzione di caroselli informativi, reel e grafiche per le storie. L'obiettivo era tradurre concetti di marketing complessi in contenuti visivamente chiari e accessibili.</p>
-                    <div class="mini-feed-grid">
-                        <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-01.jpg" alt="Post Instagram Instant Marketing"></div>
-                        <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-02.jpg" alt="Post Instagram Instant Marketing"></div>
-                        <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-03.jpg" alt="Post Instagram Instant Marketing"></div>
-                        <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-04.jpg" alt="Post Instagram Instant Marketing"></div>
-                        <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-05.jpg" alt="Post Instagram Instant Marketing"></div>
-                        <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-06.jpg" alt="Post Instagram Instant Marketing"></div>
-                    </div>
-                    <a href="https://www.instagram.com/instantmarketing.it/" target="_blank" rel="noopener noreferrer" class="project-cta-button">VISITA IL PROFILO</a>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Contenitore per il footer -->
-    <div id="footer-container"></div>
-    
-    <!-- SCRIPT PRINCIPALE E LOADER -->
-    <script src="script.js"></script>
-    <script src="loader.js"></script>
+    <!-- Progetto 3: Instant Marketing -->
+    <div class="reveal-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <span class="bg-primary text-secondary-container font-label-sm text-label-sm px-4 py-1.5 uppercase rounded-full">Content Creator</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-6 leading-tight">Instant Marketing</h2>
+          <p class="font-body-lg text-body-lg mb-8 text-on-surface-variant leading-relaxed">
+            Ho contribuito alla definizione e creazione di contenuti per il profilo formativo di Instant Marketing, focalizzandomi sulla produzione di caroselli informativi, reel e grafiche per le storie. L'obiettivo era tradurre concetti di marketing complessi in contenuti visivamente chiari e accessibili.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-10">
+            <span class="bg-surface-container-high border-2 border-primary px-4 py-1.5 font-label-sm font-bold uppercase rounded-full">CONTENT CREATION</span>
+            <span class="bg-surface-container-high border-2 border-primary px-4 py-1.5 font-label-sm font-bold uppercase rounded-full">CAROUSEL</span>
+            <span class="bg-surface-container-high border-2 border-primary px-4 py-1.5 font-label-sm font-bold uppercase rounded-full">REELS</span>
+          </div>
+          <a class="group inline-flex items-center gap-3 bg-secondary-container text-primary font-bold uppercase px-10 py-5 border-2 border-primary project-card-hover" href="https://www.instagram.com/instantmarketing.it/" target="_blank" rel="noopener noreferrer">
+            Visita il Profilo
+            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_outward</span>
+          </a>
+        </div>
+        <div>
+          <div class="mini-feed">
+            <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-01.jpg" alt="Post Instagram Instant Marketing 1" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-02.jpg" alt="Post Instagram Instant Marketing 2" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-03.jpg" alt="Post Instagram Instant Marketing 3" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-04.jpg" alt="Post Instagram Instant Marketing 4" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-05.jpg" alt="Post Instagram Instant Marketing 5" loading="lazy"/></div>
+            <div class="mini-feed-item"><img src="images/projects/instantmarketing/post-06.jpg" alt="Post Instagram Instant Marketing 6" loading="lazy"/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-section-gap rounded-[30px] mx-margin-mobile mb-section-gap">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center">
+      <h2 class="font-headline-lg text-headline-lg text-on-primary uppercase mb-8">Vuoi collaborare?</h2>
+      <p class="font-body-lg text-body-lg text-on-primary-container mb-12 max-w-xl mx-auto">
+        Raccontami del tuo brand e costruiamo insieme una presenza social che converte.
+      </p>
+      <a class="group inline-flex items-center gap-4 bg-secondary-container text-primary font-bold uppercase py-6 px-12 border-2 border-primary rounded-3xl transition-all duration-200 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#ffffff]" href="contatti.html">
+        <span class="font-headline-md text-headline-md">Contattami</span>
+        <span class="material-symbols-outlined text-4xl">arrow_forward</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary border-t-4 border-secondary-container">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-gutter py-20 max-w-container-max mx-auto">
+    <div class="font-headline-lg text-headline-lg font-black text-secondary-container mb-8 md:mb-0">GIADA MORENA</div>
+    <div class="flex flex-col items-center md:items-end gap-6">
+      <div class="flex gap-8">
+        <a class="text-on-primary-container uppercase font-bold text-label-sm hover:text-secondary-fixed transition-all duration-300" href="https://www.linkedin.com/in/giada-morena-377a53217/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="text-on-primary-container uppercase font-bold text-label-sm hover:text-secondary-fixed transition-all duration-300" href="https://www.behance.net/giadamorena1" target="_blank" rel="noopener noreferrer">Behance</a>
+        <a class="text-on-primary-container uppercase font-bold text-label-sm hover:text-secondary-fixed transition-all duration-300" href="https://www.instagram.com/giadamorena.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="text-on-primary-container uppercase font-bold text-label-sm hover:text-secondary-fixed transition-all duration-300" href="mailto:giadamorenag@gmail.com">Email</a>
+      </div>
+      <div class="font-label-sm text-label-sm text-on-primary uppercase tracking-widest opacity-50">© 2025 GIADA MORENA. ALL RIGHTS RESERVED.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    mobileBtn.querySelector('.material-symbols-outlined').textContent = isOpen ? 'close' : 'menu';
+  });
+
+  // Scroll reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('reveal-visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal-hidden').forEach(el => revealObserver.observe(el));
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.mini-feed-item img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+    });
+  });
+  document.getElementById('lightbox-close').addEventListener('click', () => lightbox.classList.remove('active'));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+</script>
 </body>
 </html>

@@ -1,77 +1,282 @@
 <!DOCTYPE html>
-<html lang="it">
+<html class="scroll-smooth" lang="it">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    
-    <title>Fotografia - Giada Morena Portfolio</title>
-    <meta content="Una selezione di scatti fotografici di Giada Morena, con un focus sul mondo dello sport e shooting." name="description">
-
-    <link href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>GM</text></svg>" rel="icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galleria Fotografica | Giada Morena — Digital Marketing &amp; Data Specialist</title>
+<meta name="description" content="Una selezione di scatti fotografici di Giada Morena: fotografia sportiva e shooting. Scopri i suoi lavori su Behance e Instagram."/>
+<link href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>GM</text></svg>" rel="icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary": "#000000", "surface-container-high": "#e8e8e8", "on-primary-fixed-variant": "#474746",
+          "on-background": "#1a1c1c", "surface": "#f9f9f9", "secondary-fixed": "#ffe16d",
+          "outline-variant": "#c4c7c7", "on-tertiary-container": "#868382", "primary-fixed": "#e5e2e1",
+          "secondary-container": "#fcd400", "primary-fixed-dim": "#c8c6c5", "secondary-fixed-dim": "#e9c400",
+          "surface-container-low": "#f3f3f3", "on-error": "#ffffff", "on-tertiary-fixed": "#1c1b1a",
+          "tertiary-fixed-dim": "#cac6c4", "tertiary-container": "#1c1b1a", "tertiary": "#000000",
+          "secondary": "#705d00", "surface-bright": "#f9f9f9", "on-error-container": "#93000a",
+          "surface-variant": "#e2e2e2", "inverse-on-surface": "#f1f1f1", "surface-container-highest": "#e2e2e2",
+          "surface-tint": "#5f5e5e", "on-surface-variant": "#444748", "error": "#ba1a1a",
+          "inverse-primary": "#c8c6c5", "outline": "#747878", "surface-container-lowest": "#ffffff",
+          "inverse-surface": "#2f3131", "primary-container": "#1c1b1b", "on-secondary-fixed": "#221b00",
+          "tertiary-fixed": "#e6e2df", "background": "#f9f9f9", "on-primary-container": "#858383",
+          "surface-container": "#eeeeee", "on-secondary": "#ffffff", "on-surface": "#1a1c1c",
+          "on-tertiary": "#ffffff", "surface-dim": "#dadada", "on-secondary-container": "#6e5c00",
+          "on-secondary-fixed-variant": "#544600", "on-primary-fixed": "#1c1b1b",
+          "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#484645", "on-primary": "#ffffff"
+        },
+        "borderRadius": { "DEFAULT": "30px", "lg": "30px", "xl": "30px", "full": "9999px", "3xl": "30px" },
+        "spacing": { "container-max": "1280px", "base": "8px", "gutter": "24px", "margin-mobile": "20px", "section-gap": "120px" },
+        "fontFamily": { "headline-md": ["Inter"], "display-xl": ["Inter"], "body-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-lg": ["Inter"], "label-sm": ["Inter"], "body-md": ["Inter"] },
+        "fontSize": {
+          "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+          "display-xl": ["96px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+          "body-lg": ["20px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "headline-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "headline-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background-color: #fcd400; transition: width 0.3s ease; }
+  .nav-link:hover::after { width: 100%; }
+  .image-container { transition: transform 0.2s ease; cursor: pointer; }
+  .image-container:hover .image-overlay { opacity: 1; }
+  .image-container:active { transform: translate(4px, 4px); }
+  .reveal-hidden { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+  .reveal-visible { opacity: 1 !important; transform: translate(0,0) !important; }
+  /* Lightbox */
+  .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border: 3px solid #fcd400; border-radius: 12px; }
+  .lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 3rem; color: #fcd400; cursor: pointer; line-height: 1; }
+  /* Shooting grid columns */
+  .shooting-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+  .shooting-col { display: flex; flex-direction: column; gap: 3rem; }
+  .shooting-col:nth-child(2) { margin-top: 6rem; }
+  @media (max-width: 768px) {
+    .shooting-grid { grid-template-columns: 1fr; }
+    .shooting-col:nth-child(2) { margin-top: 0; }
+  }
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: flex; }
+</style>
 </head>
-<body>
-    <div class="spotlight"></div>
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">×</span>
-        <img class="lightbox-content" id="lightbox-img">
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt=""/>
+</div>
+
+<!-- Header -->
+<header class="bg-surface border-b-2 border-primary fixed top-0 left-0 right-0 z-50">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto py-6">
+    <a class="font-headline-md text-headline-md font-black tracking-tighter uppercase text-primary" href="index.html">GIADA MORENA</a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-secondary transition-colors duration-200" href="progetti.html">Progetti Social</a>
+      <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-secondary transition-colors duration-200" href="siti-web.html">Siti Web</a>
+      <a class="text-primary border-b-2 border-primary font-bold uppercase translate-y-0.5" href="fotografia.html">Fotografia</a>
+      <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-secondary transition-colors duration-200" href="contatti.html">Contatti</a>
+      <a class="bg-primary text-on-primary font-bold uppercase py-2 px-6 rounded-3xl hover:bg-secondary-container hover:text-primary transition-all duration-300 text-label-sm" href="contatti.html">LET'S TALK</a>
+    </nav>
+    <button id="mobile-menu-btn" class="md:hidden" aria-label="Apri menu">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="flex-col gap-4 px-margin-mobile pb-6 border-t-2 border-primary bg-surface">
+    <a class="block font-bold uppercase text-primary py-2 border-b border-outline-variant" href="progetti.html">Progetti Social</a>
+    <a class="block font-bold uppercase text-primary py-2 border-b border-outline-variant" href="siti-web.html">Siti Web</a>
+    <a class="block font-bold uppercase text-primary py-2 border-b border-outline-variant" href="fotografia.html">Fotografia</a>
+    <a class="block font-bold uppercase text-primary py-2" href="contatti.html">Contatti</a>
+  </div>
+</header>
+
+<main class="pt-[100px]">
+
+  <!-- Page Title -->
+  <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap">
+    <div class="border-l-8 border-primary pl-8">
+      <h1 class="font-display-xl text-[56px] md:text-display-xl uppercase mb-4 leading-none">GALLERIA<br>FOTOGRAFICA</h1>
+      <p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant">
+        Catturare l'attimo, raccontare una storia. Una selezione dei miei lavori, dall'energia dello sport alla composizione dello shooting.
+      </p>
     </div>
+  </section>
 
-    <!-- Contenitore per l'header -->
-    <div id="header-container"></div>
+  <!-- Fotografia Sportiva -->
+  <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-section-gap reveal-hidden">
+    <div class="flex items-center justify-between mb-12 border-b-2 border-primary pb-4">
+      <h2 class="font-headline-lg text-headline-lg uppercase">Fotografia Sportiva</h2>
+      <div class="bg-primary text-secondary-container px-4 py-1 font-label-sm text-label-sm uppercase rounded-full hidden md:block">ENERGY • MOTION • STRENGTH</div>
+    </div>
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      <!-- Large Feature -->
+      <div class="md:col-span-8 group relative overflow-hidden border-2 border-primary rounded-3xl image-container h-80 md:h-auto">
+        <img alt="Fotografia sportiva di Giada Morena 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-01.jpg" loading="lazy"/>
+        <div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity duration-300 flex items-end p-8">
+          <div class="bg-secondary-container p-4 border-2 border-primary rounded-3xl">
+            <p class="font-label-sm text-label-sm text-primary uppercase">SHOT 01 // SPORT</p>
+          </div>
+        </div>
+      </div>
+      <!-- Tall Image -->
+      <div class="md:col-span-4 group relative overflow-hidden border-2 border-primary rounded-3xl image-container h-[600px]">
+        <img alt="Fotografia sportiva di Giada Morena 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-02.jpg" loading="lazy"/>
+        <div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity duration-300 flex items-end p-8">
+          <div class="bg-secondary-container p-4 border-2 border-primary rounded-3xl">
+            <p class="font-label-sm text-label-sm text-primary uppercase">SHOT 02 // DYNAMICS</p>
+          </div>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="md:col-span-4 group relative overflow-hidden border-2 border-primary rounded-3xl image-container aspect-square">
+        <img alt="Fotografia sportiva di Giada Morena 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-03.jpg" loading="lazy"/>
+      </div>
+      <div class="md:col-span-4 group relative overflow-hidden border-2 border-primary rounded-3xl image-container aspect-square">
+        <img alt="Fotografia sportiva di Giada Morena 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-04.jpg" loading="lazy"/>
+      </div>
+      <div class="md:col-span-4 group relative overflow-hidden border-2 border-primary rounded-3xl image-container aspect-square">
+        <img alt="Fotografia sportiva di Giada Morena 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-05.jpg" loading="lazy"/>
+      </div>
+      <!-- Wide Feature -->
+      <div class="md:col-span-12 group relative overflow-hidden border-2 border-primary rounded-3xl image-container h-[400px]">
+        <img alt="Fotografia sportiva di Giada Morena 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-06.jpg" loading="lazy"/>
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <span class="text-secondary-container font-black text-display-xl opacity-20 uppercase">ENDURANCE</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section id="gallery-intro" class="container">
-            <h1 class="page-title">GALLERIA<br>FOTOGRAFICA<span class="accent">.</span></h1>
-            <p class="hero-subtitle">Catturare l'attimo, raccontare una storia. Una selezione dei miei lavori, dall'energia dello sport alla composizione dello shooting.</p>
-        </section>
-        
-        <section id="sport-gallery" class="container">
-            <h2>FOTOGRAFIA SPORTIVA<span class="accent">.</span></h2>
-            <p class="gallery-description">L'energia del momento, la dinamicità dell'azione e la passione che traspare da ogni scatto.</p>
-            <div class="photo-grid photo-grid--sport">
-                <div class="photo-item"><img src="images/gallery/giada-morena-sport-01.jpg" alt="Fotografia sportiva di Giada Morena 1"></div>
-                <div class="photo-item"><img src="images/gallery/giada-morena-sport-02.jpg" alt="Fotografia sportiva di Giada Morena 2"></div>
-                <div class="photo-item"><img src="images/gallery/giada-morena-sport-03.jpg" alt="Fotografia sportiva di Giada Morena 3"></div>
-                <div class="photo-item"><img src="images/gallery/giada-morena-sport-04.jpg" alt="Fotografia sportiva di Giada Morena 4"></div>
-                <div class="photo-item"><img src="images/gallery/giada-morena-sport-05.jpg" alt="Fotografia sportiva di Giada Morena 5"></div>
-                <div class="photo-item"><img src="images/gallery/giada-morena-sport-06.jpg" alt="Fotografia sportiva di Giada Morena 6"></div>
-            </div>
-        </section>
+  <!-- Divider -->
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+    <div class="w-full h-1 bg-primary rounded-full"></div>
+  </div>
 
-        <section id="shooting-gallery" class="container">
-            <h2>SHOOTING<span class="accent">.</span></h2>
-            <p class="gallery-description">Ritratti e composizioni studiate per raccontare un'identità e valorizzare il soggetto.</p>
-            <div class="photo-grid photo-grid--shooting">
-                <div class="photo-item"><img src="images/gallery/giada-morena-shooting-01.jpg" alt="Shooting fotografico di Giada Morena 1"></div>
-                <div class="photo-item"><img src="images/gallery/giada-morena-shooting-02.jpg" alt="Shooting fotografico di Giada Morena 2"></div>
-                <div class="photo-item"><img src="images/gallery/giada-morena-shooting-03.jpg" alt="Shooting fotografico di Giada Morena 3"></div>
-                <div class="photo-item"><img src="images/gallery/giada-morena-shooting-04.jpg" alt="Shooting fotografico di Giada Morena 4"></div>
-                <div class="photo-item"><img src="images/gallery/giada-morena-shooting-05.jpg" alt="Shooting fotografico di Giada Morena 5"></div>
-                <div class="photo-item"><img src="images/gallery/giada-morena-shooting-06.jpg" alt="Shooting fotografico di Giada Morena 6"></div>
-            </div>
-        </section>
-        
-        <section id="behance-cta">
-            <div class="container">
-                <h2>Vedi altri lavori<span class="accent">.</span></h2>
-                <p>Scopri i miei progetti di grafica su Behance e non perderti gli ultimi scatti che pubblico su Instagram.</p>
-                <div class="cta-buttons-wrapper">
-                    <a href="https://www.behance.net/giadamorena1" target="_blank" rel="noopener noreferrer" class="cta-button">VAI SU BEHANCE</a>
-                    <a href="https://www.instagram.com/giadamorena.photos/" target="_blank" rel="noopener noreferrer" class="cta-button">SEGUIMI SU INSTAGRAM</a>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Contenitore per il footer -->
-    <div id="footer-container"></div>
-    
-    <!-- SCRIPT PRINCIPALE E LOADER -->
-    <script src="script.js"></script>
-    <script src="loader.js"></script>
+  <!-- Shooting -->
+  <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap reveal-hidden">
+    <div class="flex items-center justify-between mb-12 border-b-2 border-primary pb-4">
+      <h2 class="font-headline-lg text-headline-lg uppercase text-right w-full">Shooting</h2>
+    </div>
+    <div class="shooting-grid">
+      <!-- Column 1 -->
+      <div class="shooting-col">
+        <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container transition-all duration-300 hover:rotate-1">
+          <img alt="Shooting fotografico di Giada Morena 1" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500" src="images/gallery/giada-morena-shooting-01.jpg" loading="lazy"/>
+          <div class="p-4 bg-primary text-on-primary font-label-sm text-label-sm uppercase flex justify-between">
+            <span>Portrait 01</span><span>Studio</span>
+          </div>
+        </div>
+        <div class="bg-secondary-container border-2 border-primary rounded-3xl p-8 flex flex-col justify-center min-h-[200px]">
+          <span class="font-label-sm text-label-sm uppercase mb-4 block">CONCEPT</span>
+          <h3 class="font-headline-md text-headline-md uppercase italic leading-tight">"L'ARTE DI CATTURARE L'IDENTITÀ."</h3>
+        </div>
+      </div>
+      <!-- Column 2 -->
+      <div class="shooting-col">
+        <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container">
+          <img alt="Shooting fotografico di Giada Morena 2" class="w-full h-auto" src="images/gallery/giada-morena-shooting-02.jpg" loading="lazy"/>
+          <div class="p-4 bg-primary text-on-primary font-label-sm text-label-sm uppercase">Editorial Shooting 2024</div>
+        </div>
+        <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container">
+          <img alt="Shooting fotografico di Giada Morena 3" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500" src="images/gallery/giada-morena-shooting-03.jpg" loading="lazy"/>
+        </div>
+      </div>
+      <!-- Column 3 -->
+      <div class="shooting-col">
+        <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container">
+          <img alt="Shooting fotografico di Giada Morena 4" class="w-full h-auto" src="images/gallery/giada-morena-shooting-04.jpg" loading="lazy"/>
+        </div>
+        <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container">
+          <img alt="Shooting fotografico di Giada Morena 5" class="w-full h-auto" src="images/gallery/giada-morena-shooting-05.jpg" loading="lazy"/>
+        </div>
+        <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container">
+          <img alt="Shooting fotografico di Giada Morena 6" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500" src="images/gallery/giada-morena-shooting-06.jpg" loading="lazy"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-section-gap rounded-[30px] mx-margin-mobile mb-section-gap">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col items-center text-center">
+      <h2 class="font-headline-lg text-headline-lg text-on-primary uppercase mb-8">Scopri altri lavori</h2>
+      <p class="font-body-lg text-body-lg text-on-primary-container mb-12 max-w-xl">
+        Scopri i miei progetti di grafica su Behance e non perderti gli ultimi scatti che pubblico su Instagram.
+      </p>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a class="group relative inline-flex items-center gap-4 bg-secondary-container text-primary font-bold uppercase py-6 px-12 border-2 border-primary rounded-3xl transition-all duration-200 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#ffffff]" href="https://www.behance.net/giadamorena1" target="_blank" rel="noopener noreferrer">
+          <span class="font-headline-md text-headline-md">BEHANCE</span>
+          <span class="material-symbols-outlined text-4xl">open_in_new</span>
+        </a>
+        <a class="group relative inline-flex items-center gap-4 bg-surface text-primary font-bold uppercase py-6 px-12 border-2 border-primary rounded-3xl transition-all duration-200 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#fcd400]" href="https://www.instagram.com/giadamorena.photos/" target="_blank" rel="noopener noreferrer">
+          <span class="font-headline-md text-headline-md">INSTAGRAM</span>
+          <span class="material-symbols-outlined text-4xl">photo_camera</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary border-t-4 border-secondary-container">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-gutter py-20 max-w-container-max mx-auto">
+    <div class="font-headline-lg text-headline-lg font-black text-secondary-container mb-8 md:mb-0">GIADA MORENA</div>
+    <div class="flex flex-col items-center md:items-end gap-6">
+      <div class="flex gap-8">
+        <a class="text-on-primary-container uppercase font-bold text-label-sm hover:text-secondary-fixed transition-all duration-300" href="https://www.linkedin.com/in/giada-morena-377a53217/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="text-on-primary-container uppercase font-bold text-label-sm hover:text-secondary-fixed transition-all duration-300" href="https://www.behance.net/giadamorena1" target="_blank" rel="noopener noreferrer">Behance</a>
+        <a class="text-on-primary-container uppercase font-bold text-label-sm hover:text-secondary-fixed transition-all duration-300" href="https://www.instagram.com/giadamorena.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="text-on-primary-container uppercase font-bold text-label-sm hover:text-secondary-fixed transition-all duration-300" href="mailto:giadamorenag@gmail.com">Email</a>
+      </div>
+      <div class="font-label-sm text-label-sm text-on-primary uppercase tracking-widest opacity-50">© 2025 GIADA MORENA. ALL RIGHTS RESERVED.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    mobileBtn.querySelector('.material-symbols-outlined').textContent = isOpen ? 'close' : 'menu';
+  });
+
+  // Scroll reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('reveal-visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal-hidden').forEach(el => revealObserver.observe(el));
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.image-container img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+    });
+  });
+  document.getElementById('lightbox-close').addEventListener('click', () => lightbox.classList.remove('active'));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+</script>
 </body>
 </html>
