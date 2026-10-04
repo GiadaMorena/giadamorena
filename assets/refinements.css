@@ -367,6 +367,8 @@ main h2{font-weight:800}
 }
 @media(min-width:768px){.contact-details{order:1}.contact-form-panel{order:2}}
 /* Preserve the complete original composition in every image preview. */
+.contact-details{min-width:0}
+.page-contact a.contact-email{display:block;max-width:100%;font-size:clamp(18px,1.6vw,24px)!important;line-height:1.4;white-space:normal;overflow-wrap:anywhere!important}
 .work-card>img{height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}
 .mini-feed-item{aspect-ratio:auto!important;align-self:start}
 .mini-feed-item img{height:auto!important;object-fit:contain!important;transform:none!important}
