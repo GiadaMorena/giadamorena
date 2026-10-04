@@ -366,3 +366,14 @@ main h2{font-weight:800}
   .page-web main h3.text-headline-lg{font-size:28px!important}
 }
 @media(min-width:768px){.contact-details{order:1}.contact-form-panel{order:2}}
+/* Preserve the complete original composition in every image preview. */
+.work-card>img{height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}
+.mini-feed-item{aspect-ratio:auto!important;align-self:start}
+.mini-feed-item img{height:auto!important;object-fit:contain!important;transform:none!important}
+.page-photo .sports-gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start}
+.page-photo .sports-gallery>.image-container{grid-column:auto!important}
+.page-photo .image-container{height:auto!important;aspect-ratio:auto!important;padding-bottom:0!important;align-self:start}
+.page-photo .image-container>img{width:100%;height:auto!important;max-height:none!important;object-fit:contain!important;transform:none!important}
+.page-photo .photo-caption{position:static!important;margin:0;background:#000;color:#fff}
+.parallax-img{height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;transform:none!important}
+@media(max-width:767px){.page-photo .sports-gallery{grid-template-columns:1fr!important}.mini-feed{grid-template-columns:repeat(2,minmax(0,1fr))}}
