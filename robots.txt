@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://portfolio-giadamorena.netlify.app/sitemap.xml

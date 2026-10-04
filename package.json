@@ -1,0 +1,11 @@
+{
+  "name": "giada-morena-portfolio",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./assets/tailwind.css -o ./assets/site.css --minify && node tools/build.cjs"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17",
+    "@tailwindcss/forms": "0.5.10"
+  }
+}

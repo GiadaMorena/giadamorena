@@ -6,48 +6,10 @@
 <title>Galleria Fotografica | Giada Morena — Digital Marketing &amp; Data Specialist</title>
 <meta name="description" content="Una selezione di scatti fotografici di Giada Morena: fotografia sportiva e shooting. Scopri i suoi lavori su Behance e Instagram."/>
 <link href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>GM</text></svg>" rel="icon"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="assets/site.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-          "primary": "#000000", "surface-container-high": "#e8e8e8", "on-primary-fixed-variant": "#474746",
-          "on-background": "#1a1c1c", "surface": "#f9f9f9", "secondary-fixed": "#ffe16d",
-          "outline-variant": "#c4c7c7", "on-tertiary-container": "#868382", "primary-fixed": "#e5e2e1",
-          "secondary-container": "#fcd400", "primary-fixed-dim": "#c8c6c5", "secondary-fixed-dim": "#e9c400",
-          "surface-container-low": "#f3f3f3", "on-error": "#ffffff", "on-tertiary-fixed": "#1c1b1a",
-          "tertiary-fixed-dim": "#cac6c4", "tertiary-container": "#1c1b1a", "tertiary": "#000000",
-          "secondary": "#705d00", "surface-bright": "#f9f9f9", "on-error-container": "#93000a",
-          "surface-variant": "#e2e2e2", "inverse-on-surface": "#f1f1f1", "surface-container-highest": "#e2e2e2",
-          "surface-tint": "#5f5e5e", "on-surface-variant": "#444748", "error": "#ba1a1a",
-          "inverse-primary": "#c8c6c5", "outline": "#747878", "surface-container-lowest": "#ffffff",
-          "inverse-surface": "#2f3131", "primary-container": "#1c1b1b", "on-secondary-fixed": "#221b00",
-          "tertiary-fixed": "#e6e2df", "background": "#f9f9f9", "on-primary-container": "#858383",
-          "surface-container": "#eeeeee", "on-secondary": "#ffffff", "on-surface": "#1a1c1c",
-          "on-tertiary": "#ffffff", "surface-dim": "#dadada", "on-secondary-container": "#6e5c00",
-          "on-secondary-fixed-variant": "#544600", "on-primary-fixed": "#1c1b1b",
-          "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#484645", "on-primary": "#ffffff"
-        },
-        "borderRadius": { "DEFAULT": "30px", "lg": "30px", "xl": "30px", "full": "9999px", "3xl": "30px" },
-        "spacing": { "container-max": "1280px", "base": "8px", "gutter": "24px", "margin-mobile": "20px", "section-gap": "120px" },
-        "fontFamily": { "headline-md": ["Inter"], "display-xl": ["Inter"], "body-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-lg": ["Inter"], "label-sm": ["Inter"], "body-md": ["Inter"] },
-        "fontSize": {
-          "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-          "display-xl": ["96px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800"}],
-          "body-lg": ["20px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
-          "headline-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-          "headline-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-          "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
-          "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
-        }
-      },
-    },
-  }
-</script>
+
 <style>
   .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
   .nav-link { position: relative; }
@@ -74,15 +36,26 @@
   #mobile-menu { display: none; }
   #mobile-menu.open { display: flex; }
 </style>
+<link rel="canonical" href="https://portfolio-giadamorena.netlify.app/fotografia"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Galleria Fotografica | Giada Morena — Digital Marketing &amp; Data Specialist"/>
+<meta property="og:description" content="Una selezione di scatti fotografici di Giada Morena: fotografia sportiva e shooting. Scopri i suoi lavori su Behance e Instagram."/>
+<meta property="og:url" content="https://portfolio-giadamorena.netlify.app/fotografia"/>
+<meta property="og:image" content="https://portfolio-giadamorena.netlify.app/images/social-cover.png"/>
+<meta property="og:locale" content="it_IT"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="stylesheet" href="assets/refinements.css"/>
+<script src="assets/enhancements.js" defer></script>
 </head>
-<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
+<body class="page-photo bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
 
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox">
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Anteprima fotografica" id="lightbox">
   <span class="lightbox-close" id="lightbox-close">&times;</span>
-  <img id="lightbox-img" src="" alt=""/>
+  <img id="lightbox-img" alt=""/>
 </div>
 
+<a class="skip-link" href="#main-content">Salta al contenuto</a>
 <!-- Header -->
 <header class="bg-surface border-b-2 border-primary fixed top-0 left-0 right-0 z-50">
   <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto py-6">
@@ -94,7 +67,7 @@
       <a class="nav-link text-on-surface-variant font-medium uppercase hover:text-secondary transition-colors duration-200" href="contatti.html">Contatti</a>
       <a class="bg-primary text-on-primary font-bold uppercase py-2 px-6 rounded-3xl hover:bg-secondary-container hover:text-primary transition-all duration-300 text-label-sm" href="contatti.html">LET'S TALK</a>
     </nav>
-    <button id="mobile-menu-btn" class="md:hidden" aria-label="Apri menu">
+    <button aria-expanded="false" id="mobile-menu-btn" class="md:hidden" aria-label="Apri menu" aria-controls="mobile-menu">
       <span class="material-symbols-outlined text-3xl">menu</span>
     </button>
   </div>
@@ -106,14 +79,14 @@
   </div>
 </header>
 
-<main class="pt-[100px]">
+<main id="main-content" class="pt-[100px]">
 
   <!-- Page Title -->
   <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap">
     <div class="border-l-8 border-primary pl-8">
       <h1 class="font-display-xl text-[56px] md:text-display-xl uppercase mb-4 leading-none">GALLERIA<br>FOTOGRAFICA</h1>
       <p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant">
-        Catturare l'attimo, raccontare una storia. Una selezione dei miei lavori, dall'energia dello sport alla composizione dello shooting.
+        Catturare l'attimo, raccontare una storia. Dalle partite di calcio al Giro d’Italia, fino agli shooting per Miho sushi e Neofisio.
       </p>
     </div>
   </section>
@@ -124,11 +97,12 @@
       <h2 class="font-headline-lg text-headline-lg uppercase">Fotografia Sportiva</h2>
       <div class="bg-primary text-secondary-container px-4 py-1 font-label-sm text-label-sm uppercase rounded-full hidden md:block">ENERGY • MOTION • STRENGTH</div>
     </div>
-    <!-- Bento Grid -->
+    <p class="photo-context">Sport / Copertura fotografica degli eventi: azione, ritmo e momenti di squadra.</p>
+<!-- Bento Grid -->
     <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
       <!-- Large Feature -->
       <div class="md:col-span-8 group relative overflow-hidden border-2 border-primary rounded-3xl image-container h-80 md:h-auto">
-        <img alt="Fotografia sportiva di Giada Morena 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-01.jpg" loading="lazy"/>
+        <img alt="Como Women–Inter — fotografia sportiva di Giada Morena, scatto 01" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-01.webp" loading="lazy" width="1440" height="960" decoding="async"/><p class="photo-caption">Como Women–Inter · 01</p>
         <div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity duration-300 flex items-end p-8">
           <div class="bg-secondary-container p-4 border-2 border-primary rounded-3xl">
             <p class="font-label-sm text-label-sm text-primary uppercase">SHOT 01 // SPORT</p>
@@ -137,7 +111,7 @@
       </div>
       <!-- Tall Image -->
       <div class="md:col-span-4 group relative overflow-hidden border-2 border-primary rounded-3xl image-container h-[600px]">
-        <img alt="Fotografia sportiva di Giada Morena 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-02.jpg" loading="lazy"/>
+        <img alt="Real Meda — fotografia sportiva di Giada Morena, scatto 02" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-02.webp" loading="lazy" width="1440" height="960" decoding="async"/><p class="photo-caption">Real Meda · 02</p>
         <div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity duration-300 flex items-end p-8">
           <div class="bg-secondary-container p-4 border-2 border-primary rounded-3xl">
             <p class="font-label-sm text-label-sm text-primary uppercase">SHOT 02 // DYNAMICS</p>
@@ -146,17 +120,17 @@
       </div>
       <!-- Row 2 -->
       <div class="md:col-span-4 group relative overflow-hidden border-2 border-primary rounded-3xl image-container aspect-square">
-        <img alt="Fotografia sportiva di Giada Morena 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-03.jpg" loading="lazy"/>
+        <img alt="Como Women–Milan — fotografia sportiva di Giada Morena, scatto 03" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-03.webp" loading="lazy" width="1440" height="960" decoding="async"/><p class="photo-caption">Como Women–Milan · 03</p>
       </div>
       <div class="md:col-span-4 group relative overflow-hidden border-2 border-primary rounded-3xl image-container aspect-square">
-        <img alt="Fotografia sportiva di Giada Morena 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-04.jpg" loading="lazy"/>
+        <img alt="Como Women–Juventus — fotografia sportiva di Giada Morena, scatto 04" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-04.webp" loading="lazy" width="1440" height="960" decoding="async"/><p class="photo-caption">Como Women–Juventus · 04</p>
       </div>
       <div class="md:col-span-4 group relative overflow-hidden border-2 border-primary rounded-3xl image-container aspect-square">
-        <img alt="Fotografia sportiva di Giada Morena 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-05.jpg" loading="lazy"/>
+        <img alt="Meda–Casteggio — fotografia sportiva di Giada Morena, scatto 05" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-05.webp" loading="lazy" width="1440" height="960" decoding="async"/><p class="photo-caption">Meda–Casteggio · 05</p>
       </div>
       <!-- Wide Feature -->
       <div class="md:col-span-12 group relative overflow-hidden border-2 border-primary rounded-3xl image-container h-[400px]">
-        <img alt="Fotografia sportiva di Giada Morena 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-06.jpg" loading="lazy"/>
+        <img alt="Giro d’Italia 2025 — fotografia sportiva di Giada Morena, scatto 06" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/gallery/giada-morena-sport-06.webp" loading="lazy" width="1440" height="1080" decoding="async"/><p class="photo-caption">Giro d’Italia 2025 · 06</p>
         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
           <span class="text-secondary-container font-black text-display-xl opacity-20 uppercase">ENDURANCE</span>
         </div>
@@ -174,13 +148,14 @@
     <div class="flex items-center justify-between mb-12 border-b-2 border-primary pb-4">
       <h2 class="font-headline-lg text-headline-lg uppercase text-right w-full">Shooting</h2>
     </div>
-    <div class="shooting-grid">
+    <p class="photo-context">Shooting / Progetti fotografici per Miho sushi e Neofisio.</p>
+<div class="shooting-grid">
       <!-- Column 1 -->
       <div class="shooting-col">
         <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container transition-all duration-300 hover:rotate-1">
-          <img alt="Shooting fotografico di Giada Morena 1" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500" src="images/gallery/giada-morena-shooting-01.jpg" loading="lazy"/>
+          <img alt="Miho sushi — shooting fotografico di Giada Morena, scatto 01" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500" src="images/gallery/giada-morena-shooting-01.webp" loading="lazy" width="1083" height="1440" decoding="async"/><p class="photo-caption">Miho sushi · 01</p>
           <div class="p-4 bg-primary text-on-primary font-label-sm text-label-sm uppercase flex justify-between">
-            <span>Portrait 01</span><span>Studio</span>
+            <span>Miho sushi</span><span>Shooting</span>
           </div>
         </div>
         <div class="bg-secondary-container border-2 border-primary rounded-3xl p-8 flex flex-col justify-center min-h-[200px]">
@@ -191,23 +166,23 @@
       <!-- Column 2 -->
       <div class="shooting-col">
         <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container">
-          <img alt="Shooting fotografico di Giada Morena 2" class="w-full h-auto" src="images/gallery/giada-morena-shooting-02.jpg" loading="lazy"/>
-          <div class="p-4 bg-primary text-on-primary font-label-sm text-label-sm uppercase">Editorial Shooting 2024</div>
+          <img alt="Miho sushi — shooting fotografico di Giada Morena, scatto 02" class="w-full h-auto" src="images/gallery/giada-morena-shooting-02.webp" loading="lazy" width="1152" height="1440" decoding="async"/><p class="photo-caption">Miho sushi · 02</p>
+          <div class="p-4 bg-primary text-on-primary font-label-sm text-label-sm uppercase">Miho sushi / Shooting</div>
         </div>
         <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container">
-          <img alt="Shooting fotografico di Giada Morena 3" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500" src="images/gallery/giada-morena-shooting-03.jpg" loading="lazy"/>
+          <img alt="Neofisio — shooting fotografico di Giada Morena, scatto 03" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500" src="images/gallery/giada-morena-shooting-03.webp" loading="lazy" width="1440" height="1083" decoding="async"/><p class="photo-caption">Neofisio · 03</p>
         </div>
       </div>
       <!-- Column 3 -->
       <div class="shooting-col">
         <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container">
-          <img alt="Shooting fotografico di Giada Morena 4" class="w-full h-auto" src="images/gallery/giada-morena-shooting-04.jpg" loading="lazy"/>
+          <img alt="Neofisio — shooting fotografico di Giada Morena, scatto 04" class="w-full h-auto" src="images/gallery/giada-morena-shooting-04.webp" loading="lazy" width="1440" height="1083" decoding="async"/><p class="photo-caption">Neofisio · 04</p>
         </div>
         <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container">
-          <img alt="Shooting fotografico di Giada Morena 5" class="w-full h-auto" src="images/gallery/giada-morena-shooting-05.jpg" loading="lazy"/>
+          <img alt="Neofisio — shooting fotografico di Giada Morena, scatto 05" class="w-full h-auto" src="images/gallery/giada-morena-shooting-05.webp" loading="lazy" width="1440" height="1083" decoding="async"/><p class="photo-caption">Neofisio · 05</p>
         </div>
         <div class="group relative border-2 border-primary rounded-3xl overflow-hidden image-container">
-          <img alt="Shooting fotografico di Giada Morena 6" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500" src="images/gallery/giada-morena-shooting-06.jpg" loading="lazy"/>
+          <img alt="Neofisio — shooting fotografico di Giada Morena, scatto 06" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500" src="images/gallery/giada-morena-shooting-06.webp" loading="lazy" width="1440" height="1083" decoding="async"/><p class="photo-caption">Neofisio · 06</p>
         </div>
       </div>
     </div>
@@ -246,7 +221,7 @@
         <a class="text-on-primary-container uppercase font-bold text-label-sm hover:text-secondary-fixed transition-all duration-300" href="https://www.instagram.com/giadamorena.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a class="text-on-primary-container uppercase font-bold text-label-sm hover:text-secondary-fixed transition-all duration-300" href="mailto:giadamorenag@gmail.com">Email</a>
       </div>
-      <div class="font-label-sm text-label-sm text-on-primary uppercase tracking-widest opacity-50">© 2025 GIADA MORENA. ALL RIGHTS RESERVED.</div>
+      <div class="font-label-sm text-label-sm text-on-primary uppercase tracking-widest opacity-50">© 2026 GIADA MORENA. ALL RIGHTS RESERVED.</div>
     </div>
   </div>
 </footer>
@@ -265,18 +240,6 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal-hidden').forEach(el => revealObserver.observe(el));
 
-  // Lightbox
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  document.querySelectorAll('.image-container img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      lightbox.classList.add('active');
-    });
-  });
-  document.getElementById('lightbox-close').addEventListener('click', () => lightbox.classList.remove('active'));
-  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
 </script>
 </body>
 </html>
