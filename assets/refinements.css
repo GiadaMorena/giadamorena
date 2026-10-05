@@ -379,3 +379,25 @@ main h2{font-weight:800}
 .page-photo .photo-caption{position:static!important;margin:0;background:#000;color:#fff}
 .parallax-img{height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;transform:none!important}
 @media(max-width:767px){.page-photo .sports-gallery{grid-template-columns:1fr!important}.mini-feed{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Conversational contact flow */
+.page-contact a.contact-email{font-size:clamp(13px,1.3vw,19px)!important;white-space:nowrap;overflow-wrap:normal!important;letter-spacing:-.03em}
+.contact-chat header{border-bottom:1px solid #ddd;padding-bottom:24px;margin-bottom:24px}
+.chat-status{font-size:12px;font-weight:800;letter-spacing:.12em}
+.contact-chat h2{font-size:clamp(25px,3vw,38px);line-height:1.15;margin:12px 0}
+.contact-chat header p{font-size:15px;line-height:1.5}
+.chat-log{display:flex;flex-direction:column;gap:14px}
+.chat-bubble{max-width:90%;padding:16px 20px;border-radius:18px 18px 18px 2px;background:#f0f0ed;font-size:16px;line-height:1.5;overflow-wrap:anywhere;white-space:pre-wrap}
+.chat-user{align-self:flex-end;background:#ffdc00;border-radius:18px 18px 2px 18px}
+.chat-composer{margin-top:28px;display:grid;gap:12px}
+.chat-composer label{font-weight:700;font-size:13px}
+.chat-composer input,.chat-composer textarea{width:100%;min-width:0;border:1px solid #000;border-radius:12px;padding:14px;font-size:16px;background:white}
+.contact-chat button{min-height:48px;border:1px solid #000;border-radius:24px;padding:12px 20px;font-weight:700;font-size:14px;cursor:pointer}
+.chat-composer button,.chat-send{background:#000;color:white}
+.chat-choices,.chat-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.chat-choices button,.chat-restart{background:white}
+.contact-chat button:hover{background:#ffdc00;color:#000}
+.contact-chat [hidden],.contact-form-panel>form[hidden]{display:none!important}
+.contact-chat :focus-visible{outline:3px solid #000;outline-offset:4px}
+@media(max-width:767px){.chat-bubble{max-width:96%;padding:14px}.chat-choices{flex-direction:column}.chat-choices button{text-align:left}.page-contact a.contact-email{font-size:clamp(13px,4.1vw,19px)!important}}
+.contact-details>div:first-child{container-type:inline-size}
+.page-contact a.contact-email{font-size:min(19px,6.4cqw)!important}
