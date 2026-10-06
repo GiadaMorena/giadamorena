@@ -401,3 +401,7 @@ main h2{font-weight:800}
 @media(max-width:767px){.chat-bubble{max-width:96%;padding:14px}.chat-choices{flex-direction:column}.chat-choices button{text-align:left}.page-contact a.contact-email{font-size:clamp(13px,4.1vw,19px)!important}}
 .contact-details>div:first-child{container-type:inline-size}
 .page-contact a.contact-email{font-size:min(19px,6.4cqw)!important}
+/* One shared corner radius across cards, media, buttons and form controls. */
+:root{--corner-radius:24px}
+[class*="rounded"],[class~="border"],[class*="border-2"],button,input:not([type="radio"]):not([type="checkbox"]),textarea,select,.work-card,.exp-card,.image-container,.mini-feed-item,.chat-bubble,.contact-form-panel,.thanks-page main,.thanks-page a{border-radius:var(--corner-radius)!important}
+.image-container,.mini-feed-item{overflow:hidden}
