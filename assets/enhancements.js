@@ -1,4 +1,28 @@
 (() => {
+// Use vector arrows for static labels and dynamically inserted chat actions.
+const arrowPaths = {'\u2197':'M7 17 17 7M7 7h10v10','\u2192':'M4 12h16m-6-6 6 6-6 6','arrow_forward':'M4 12h16m-6-6 6 6-6 6','arrow_outward':'M7 17 17 7M7 7h10v10','expand_more':'m6 9 6 6 6-6'};
+function vectorArrow(path) {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+  for (const [key,value] of Object.entries({class:'arrow-icon',viewBox:'0 0 24 24',fill:'none',stroke:'currentColor','stroke-width':'1.8','stroke-linecap':'round','stroke-linejoin':'round','aria-hidden':'true',focusable:'false'})) svg.setAttribute(key,value);
+  const line = document.createElementNS(svg.namespaceURI,'path'); line.setAttribute('d',path); svg.append(line); return svg;
+}
+function replaceArrows(root) {
+  if (root.nodeType !== 1 || root.closest('svg,script,style')) return;
+  root.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+    const path = arrowPaths[icon.textContent.trim()];
+    if (path) icon.replaceWith(vectorArrow(path));
+  });
+  const walker = document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+  const nodes = []; while(walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node => {
+    if (node.parentElement.closest('svg,script,style') || !/[\u2197\u2192]/.test(node.textContent)) return;
+    const fragment = document.createDocumentFragment();
+    node.textContent.split(/([\u2197\u2192])/).forEach(part => fragment.append(arrowPaths[part]?vectorArrow(arrowPaths[part]):document.createTextNode(part)));
+    node.replaceWith(fragment);
+  });
+}
+replaceArrows(document.body);
+new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>replaceArrows(node.nodeType===1?node:node.parentElement)))).observe(document.body,{childList:true,subtree:true});
 // Keep menu accessibility synchronized with each page's existing toggle.
 const menuButton = document.getElementById('mobile-menu-btn');
 const menuPanel = document.getElementById('mobile-menu');

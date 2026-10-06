@@ -424,3 +424,4 @@ html{scroll-behavior:smooth}
 button:active{transform:scale(.98)}
 @media(max-width:767px){.project-discovery{margin-bottom:48px}.discovery-options{flex-direction:column}.discovery-options button{text-align:left;width:100%}.discovery-result{min-height:190px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reading-progress{display:none}}
+.arrow-icon{display:inline-block;width:1.2em;height:1.2em;vertical-align:-.2em;flex-shrink:0;margin-left:.25em}
