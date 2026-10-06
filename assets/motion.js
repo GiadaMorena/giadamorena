@@ -1,5 +1,20 @@
 (() => {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const scenes = document.querySelectorAll('.project-scene');
+  const sceneObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      document.querySelectorAll('.scene-nav a').forEach(link => {
+        if (link.hash === `#${entry.target.id}`) link.setAttribute('aria-current','true');
+        else link.removeAttribute('aria-current');
+      });
+      if (!reduced.matches && !entry.target.dataset.entered) {
+        entry.target.dataset.entered = 'true';
+        entry.target.querySelectorAll('.scene-copy,.scene-media').forEach((element,index)=>element.animate([{opacity:0,transform:`translateY(${index?50:28}px)`},{opacity:1,transform:'translateY(0)'}],{duration:1100,delay:index*120,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'}));
+      }
+    });
+  },{threshold:.35});
+  scenes.forEach(scene=>sceneObserver.observe(scene));
   const options = {
     social: ['Dal piano editoriale al match-day.', 'Esplora Calcio Femminile Italia e Real Meda: identità, contenuti e comunicazione sul campo.', 'progetti.html', 'Guarda i progetti social'],
     photo: ['Dentro il momento.', 'Sport e shooting: una selezione di immagini da esplorare, senza ritagli.', 'fotografia.html', 'Entra nella galleria'],
